@@ -55,7 +55,7 @@ ADD_KIT ~D5_TEST%num_kits%~
 ~D5_TEST%num_kits%           0  0  0  0  0  0~
 
 //KIT ABILITIES 2DA FILE_____________________________________________________________
-~extra_kits/D5_TEST.2da~
+~extra_kits/d5_extkt.2da~
 
 //RACIAL KIT AVAILABILITY____________________________________________________________
 ~~
@@ -64,7 +64,7 @@ ADD_KIT ~D5_TEST%num_kits%~
 //CLASSES: Mage = 1, Fighter = 2, Cleric=3, Thief = 4, Bard = 5
 //         Paladin 6, Druid = 11, Ranger = 12, Sorcerer = 19
 //         Monk = 20
-~0x00004000 2~
+~0x00004000 20~
 
 //HIGH LEVEL ABILITIES ABBREVIATION__________________________________________________
 ~Fi0~
@@ -80,7 +80,7 @@ SAY ~Test kit %num_kits%~
 
 //EE KIT EXTRAS______________________________________________________________________
 //
-ACTION_IF GAME_IS ~bgee bg2ee~ THEN BEGIN
+ACTION_IF GAME_IS ~bgee bg2ee iwdee~ THEN BEGIN
 	LAF fl#add_kit_ee
 		INT_VAR
 			briefdesc = RESOLVE_STR_REF (~D5_TEST%num_kits%~)
