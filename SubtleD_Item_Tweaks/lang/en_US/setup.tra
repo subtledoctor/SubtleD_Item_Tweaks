@@ -1,0 +1,368 @@
+@1   = ~skipping component~
+@2   = ~skipping non-EE component~
+@3   = ~already included~
+@4   = ~skipping tweak components~
+@5   = ~skipping new kit components~
+@6   = ~...~
+@7   = ~skipping item components~
+@8   = ~skipping for IWD~
+@9   = ~kit change~
+//
+//
+@100   = ~YARAS Yet Another Revised Armor System~
+@110   = ~Aesthetic & Enchantment Tweaks~
+@111   = ~Standardize Enchanted Equipment~
+@112   = ~Replace Enchanted Equipment with Mastercraft~
+@120   = ~Functional Weapon Tweaks~
+@130   = ~Light/Heavy Weapon Distinctions (DEPRECATED)~
+@140   = ~IWD Item Tweaks~
+@150   = ~Restrict Dual-Wielding~
+@151   = ~Dual-Wield small weapons only~
+@152   = ~Dual-Wield small/medium weapons~
+@160   = ~All Potions Usable by Any Class~
+@170   = ~Armored Spellcasting for Bards~
+//
+@1000  = ~Set Spell Weapon APR to 2~
+@1010 = ~Add Backstab Immunity to the Ring of Danger Sense~
+@1020 = ~Proper Missile Deflection for the Gloves of Missile Snaring~
+@1030 = ~Improve Detonating Weapons~
+@1040 = ~Add Revised Barkskin to 'Skin of the Forest' Armor~
+@1050 = ~Make IR's Rod of Absorption Truly Instantaneous~
+@1060 = ~Make the Gargoyle Cloak Apply Stoneskin Instead of an AC Bonus~
+@1070 = ~Make the Dwarven Thrower Hammer Usable by Non-Dwarves~
+@1080 = ~Improve Azlaer's Harp and Methild's Harp~
+@1090 = ~Nerf Edwin's Amulet~
+@1091 = ~Only +1 Bonus Slot per Spell Level~
+@1092 = ~Limit Bonus Slots to 7th Level Spells~
+@1093 = ~Only +1 Bonus Slots AND Limited to 7th Level~
+@1100 = ~Metamagic Instead of MR for Cloak of the Weave~
+@1110 = ~Change Rings of Wizardry~
+@1111 = ~Rings of Wizardry cast Spell Sequencers~
+@1112 = ~Only Evermemory + Kontik's Ring cast Spell Sequencer~
+@1113 = ~Replace Evermemory with a Ring of Acuity~
+//
+//
+@10001  = ~^Armor Class:.+$~
+@10002  = ~Armor Class: ~
+@10003  = ~Damage Resistance: ~
+@10004  = ~Dexterity Penalty: -~
+@10005  = ~Arcane Casting Speed Penalty: +~
+@10006  = ~Weapon Attack Speed Penalty: +~
+@10007  = ~Movement Speed Penalty: -~
+@10008  = ~Arcane Spell Failure Chance: ~
+@10011  = ~dragon~
+@10012  = ~elven~
+@10013  = ~elvish~
+@10014  = ~sylvan~
+@10015  = ~bladesinger~
+@10018  = ~robe~
+@10019  = ~cloak~
+@10021  = ~Stealth, Pick Pockets: -~
+@10022  = ~Open Locks, Set Traps: -~
+@10023  = ~Find Traps, Detect Illusion: -~
+@10030  = ~Armor of Faith
+
+Level: 1
+Sphere: Protection
+Range: 0
+Duration: 3 rounds + 1 round/level 
+Casting Time: 1
+Area of Effect: The caster
+Saving Throw: None 
+
+The caster of the Armor of Faith receives significant protection against melee and magical attacks. This magical armor-like force surrounds the caster and absorbs a portion of any damage taken. This amounts to an effect 10% boost to damage resistance against all damage types.~
+@10101   = ~Mastercraft Arrows~
+@10102   = ~Enchanted Arrows~
+@10103   = ~Mastercraft Bolts~
+@10104   = ~Enchanted Bolts~
+@10105   = ~Mastercraft Sling Bullets~
+@10106   = ~Enchanted Sling Bullets~
+@10107   = ~Mastercraft Battle Axe~
+@10108   = ~Enchanted Throwing Axe~
+@10109   = ~Mastercraft Flail~
+@10110   = ~Mastercraft Mace~
+@10111   = ~Mastercraft Morning Star~
+@10112   = ~Enchanted Flail~
+@10113   = ~Enchanted Morning Star~
+@10114   = ~Mastercraft Composite Longbow~
+@10115   = ~Mastercraft Longbow~
+@10116   = ~Mastercraft Shortbow~
+@10117   = ~Enchanted Composite Longbow~
+@10118   = ~Enchanted Longow~
+@10119   = ~Enchanted Shortbow~
+@10120   = ~Mastercraft Dagger~
+@10121   = ~Mastercraft Darts~
+@10122   = ~Mastercraft Halberd~
+@10123   = ~Mastercraft War Hammer~
+@10124   = ~Mastercraft Sling~
+@10125   = ~Mastercraft Spear~
+@10126   = ~Enchanted Spear~
+@10127   = ~Mastercraft Quarterstaff~
+@10128   = ~Enchanted Quarterstaff~
+@10129   = ~Mastercraft Bastard Sword~
+@10130   = ~Mastercraft Long Sword~
+@10131   = ~Mastercraft Short Sword~
+@10132   = ~Mastercraft Scimitar~
+@10133   = ~Mastercraft Katana~
+@10134   = ~Mastercraft Wakizashi~
+@10135   = ~Mastercraft Ninja-to~
+@10136   = ~Drusus~
+@10137   = ~Enchanted Long Sword~
+@10138   = ~Enchanted Bastard Sword~
+@10139   = ~Enchanted Katana~
+@10140   = ~Mastercraft Two-Handed Sword~
+@10141   = ~Enchanted Two-Handed Sword~
+@10142   = ~Mastercraft Heavy Crossbow~
+@10143   = ~Mastercraft Light Crossbow~
+@10144   = ~Mastercraft Chain Mail~
+@10145   = ~Mastercraft Splint Mail~
+@10146   = ~Enchanted Chain Mail~
+@10147   = ~Mastercraft Leather Armor~
+@10148   = ~Mastercraft Studded Leather~
+@10149   = ~Enchanted Leather Armor~
+@10150   = ~Enchanted Halberd~
+@10151   = ~Mastercraft Small Shield~
+@10152   = ~Mastercraft Medium Shield~
+@10153   = ~Mastercraft Large Shield~
+@10154   = ~The Redshield~
+@10155   = ~Mastercraft Buckler~
+@10156   = ~Enchanted Small Shield~
+@10157   = ~Enchanted Medium Shield~
+@10158   = ~Quiver of Plenty~
+@10159   = ~Quiver of Plenty
+The history of this magical quiver has been long forgotten, though it likely had something to do with the inexplicable but well documented shortage of competent fletchers during the Time of Troubles.
+
+STATISTICS:
+
+Equipped abilities:
+– Unlimited mastercraft arrows 
+
+Weight: 0~
+@10160   = ~Case of Plenty~
+@10161   = ~Case of Plenty
+The history of this magical case has been long forgotten, though it likely had something to do with the inexplicable but well documented shortage of competent fletchers during the Time of Troubles.
+
+STATISTICS:
+
+Equipped abilities:
+– Unlimited mastercraft bolts
+
+Weight: 0~
+@10162   = ~Mastercraft Club~
+@10163   = ~Bag of Plenty~
+@10164   = ~Bag of Plenty
+Although this soft cloth pouch is empty right now, there is still a powerful aura of magic surrounding it.
+
+STATISTICS:
+
+Equipped abilities:
+– Unlimited mastercraft sling bullets
+
+Weight: 0~
+@10165   = ~Enchanted Battle Axe~
+@10166   = ~Dagger: Heart of the Golem~
+@10167   = ~Enchanted Dagger~
+@10168   = ~Suryris' Blade~
+@10169   = ~War Hammer: Ashideena~
+@10170   = ~War Hammer: Borok's Fist~
+@10171   = ~Enchanted Studded Leather~
+@10172   = ~Mastercraft Plate Mail~
+@10173   = ~Mastercraft Full Plate~
+@10174   = ~Enchanted Full Plate~
+@10175   = ~Enchanted Large Shield~
+@10176   = ~Enchanted Sling~
+@10177   = ~Varscona~
+@10178   = ~Enchanted Short Sword~
+@10179   = ~Water's Edge~
+@10180   = ~Enchanted Mace~
+@10181   = ~Enchanted Club~
+@10182   = ~Drow Crossbow Bolts~
+@10183   = ~Enchanted Drow Flail~
+@10184   = ~Enchanted Drow Halberd~
+@10185   = ~Enchanted Drow Spear~
+@10186   = ~Enchanted Drow Scimitar~
+@10187   = ~Enchanted Drow Long Sword~
+@10188   = ~Enchanted War Hammer~
+@10189   = ~Yoshimo's Katana~
+@10190   = ~Enchanted Heavy Crossbow~
+@10191   = ~Enchanted Light Crossbow~
+@10192   = ~Quiver of Plenty
+The history of this magical quiver has been long forgotten, though it likely had something to do with the inexplicable but well documented shortage of competent fletchers during the Time of Troubles.
+
+STATISTICS:
+
+Equipped abilities:
+– Unlimited enchanted arrows 
+
+Weight: 0~
+@10193   = ~Case of Plenty
+The history of this magical case has been long forgotten, though it likely had something to do with the inexplicable but well documented shortage of competent fletchers during the Time of Troubles.
+
+STATISTICS:
+
+Equipped abilities:
+– Unlimited enchanted bolts
+
+Weight: 0~
+@10194   = ~Bag of Plenty
+Although this soft cloth pouch is empty right now, there is still a powerful aura of magic surrounding it.
+
+STATISTICS:
+
+Equipped abilities:
+– Unlimited enchanted sling bullets
+
+Weight: 0~
+@10195   = ~Bone Club~
+@10196   = ~Gnasher~
+@10197   = ~Greater Cloak of Protection~
+@10198   = ~Duskblade~
+@10199   = ~Wave~
+@10200   = ~The Kneecapper~
+@10201   = ~Greater Ring of Protection~
+@10202   = ~Superior Ring of Protection~
+@10203   = ~Shield of Falling Stars~
+@10204   = ~The Impaler~
+@10205   = ~Halcyon Spear~
+@10206   = ~Kondar~
+@10207   = ~Rashad's Talon~
+@10208   = ~Enchanted Plate Mail~
+@10701	= ~ ~
+//
+//
+@11010 = ~(Spells cannot be cast while wearing armor.)~
+@11020 = ~(Spells cannot be cast while wearing armor heavier than studded leather.)~
+//
+//
+@30102 = ~Ring of Danger Sense
+
+Nizzuf's Maze was a grand hedge maze created by the archmage Nizzuf for his amusement. The maze boasted hundreds of magical traps, most of them extremely lethal. Nizzuf posted a reward big enough to buy a kingdom to the man or woman brave enough to enter the maze and reach its core. Thousands tried and died. But one, Oteg Verm, completed the maze, thanks mainly to this ring which let him "see" where the traps were hidden.
+
+STATISTICS:
+
+Equipped abilities:
+- Detect Traps: +25%
+- 1-point bonus to Armor Class
+- immunity to backstabs
+
+Weight: 0
+~
+@30202 = ~Foik Morur demonstrated the effectiveness of these gloves at a community fair near Beregost several years back. He paid a local Archer to fire arrows at him. As the arrows approached, Foik's hands would move of their own accord, either knocking the arrow away or catching it. He earned more than a few pieces of gold for his troubles, and these earnings attracted some shadowy figures to Foik's tent that evening. The next morning, Foik was found dead and the gloves missing.
+
+NOTE: while these gloves allow the wearer to avoid the base missile damage of a projectile that is caught or deflected, any effects accompanying that projectile, like fire or electricity or poison, may still be applied.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: 3-point bonus vs. missile attacks
+- Deflect first missile attack each round
+
+Weight: 2~
+
+@30402 = ~This was the armor of Seffer Ekr, and a sign of the goddess Mielikki's favor. She had rewarded the ranger's loyalty with the promise that he would never die in battle, and he defied death for many years, holding hordes of monsters back from his home forest. A heart attack claimed him when his time was done, not an enemy's blade.
+
+STATISTICS:
+
+Equipped Abilities:
+ Bark Armor: fast-growing bark grows on the exterior of this armor, providing tough protection that can completely block one physical attack. A successful hit against the wearer dislodges the bark-like growth; it regrows enough to block another hit after one round.
+
+Armor Class: 5
+Weight: 15
+Requires: 4 Strength
+~
+@30602 = ~Though this dark gray cloak appears to be made of stone, it is soft and flexible as cloth. When donned, it allows its wearer to assume a statue-like form once per day. These cloaks are often found among the duergar, who first designed them, but occasionally one winds up on the surface. 
+
+STATISTICS:
+
+Equipped abilities:
+- Physical Damage Resistance: +5%
+- Protects against critical hits
+
+Charge abilities:
+- Stoneskin (2x per day): 5 skins
+  Duration: 1 turn
+
+Weight: 2
+~
+// Azlaer's Harp, replace 30801 with 30802
+@30801 = ~Resist Fear (~
+@30802 = ~Resist Fear, Aid (~
+// Methild's Harp, replace @30811 with either @30812 or @30813
+@30811 = ~Remove Paralysis (~
+@30812 = ~Remove Paralysis/Remove Curse (~
+@30813 = ~Remove Paralysis/Break Enchantment~
+@30912 = ~This is Edwin's birthright, inlaid with his family stone.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize one extra wizard spell of each level
+
+Weight: 1
+~
+@30922 = ~This is Edwin's birthright, inlaid with his family stone.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize extra wizard spells of up to 7th level
+
+Weight: 1
+~
+@31001 = ~Robe of the Weave~
+@31002 = ~Crafted by some of the finest mages and weavers of the Realms, this robe is made from the fibers of plants specially cultivated during the Time of Troubles, and the weave of the robe is woven counter to the magical Weave of Faerun. The resulting robes grant the wearer significant resistance to all spells, and are a favored defensive tool of powerful spellcasters, but beyond just mere magical protection, a robe such as this is a symbol of prestige.
+
+STATISTICS:
+
+Equipped Abilities:
+ Contingency once per day
+ Minor Spell Deflection once per day
+
+(Note: using these powers is indistinguishable from casting the magic spells of the same names. For good or ill, doing can be detected and identified as using arcane magic.)
+
+Weight: 6
+~
+@31111 = ~Ring of Wizardry: Evermemory~
+@31112 = ~Ring of Wizardry: Evermemory
+Long ago, a grand wizard from Amn was rumored to have defied Mystra's limitations on the magical arts. Legends spoke of this wizard being able to cast spells without the limitation of memorization. In the end, it was found that his powers stemmed from the several magical rings that he had made for himself. His proclaimed "everlasting memory" was a hoax, though his rings continue to be one of the most sought-after items in the realms.
+
+STATISTICS:
+
+Equipped abilities:
+– Cast Minor Spell Sequencer up to three times per day
+
+Weight: 0~
+@31113 = ~Ring of Acuity~
+@31114 = ~The origins of this ring are unclear, and while its enchantments share similarities with historical examples of Rings of Wizardry, there is something strange in how it feels, either in the weight of the metal or in the aura it projects, and it does not function the same. It was likely found on some distant plane and, as such, its maker will remain a mystery to you.
+
+STATISTICS:
+
+Equipped abilities:
+– The wearer can cast Spell Sequencer once per day
+
+Weight: 0~
+@31115 = ~Ring of Wizardry: Reaching Ring~
+@31116 = ~Ring of Wizardry: Reaching Ring
+This ring is masterfully enchanted, allowing the wearer to cast more spells than normally possible. It was originally commissioned by spellcaster <CHARNAME>, apparently at great monetary and personal cost.
+
+STATISTICS:
+
+Equipped abilities:
+– The wearer can cast Spell Trigger once per day
+
+Weight: 0~
+@31117 = ~Sorcerian Ring~
+@31118 = ~Sorcerian Ring:  'Grasping Power'
+This ring is undoubtedly the pinnacle of mnemonic lucubration. Crafted at <CHARNAME>'s request from rings of Wizardry, Acuity and Metaspell Influence Amulet it allows the bearer to memorize an extra spell each day for all spell levels from one to seven. In addition, a ring of protection has been melted into the band, providing minor physical and magical defenses.
+
+STATISTICS:
+
+Equipped abilities:
+– The wearer can cast Spell Sequencer and Spell Trigger once per day
+– Can memorize one extra spell of spell levels 1 through 7
+– Armor Class: +1
+– Saving Throws: +1
+
+Weight: 0~
+//
+//

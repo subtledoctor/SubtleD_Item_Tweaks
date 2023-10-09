@@ -1,0 +1,346 @@
+@1 = ~pomijanie komponentu~
+@2 = ~pomijanie komponentu nie-EE ~
+@3   = ~already included~
+@4 = ~pomijanie komponentow ulepszen~
+@5 = ~pomijanie komponentow nowych podklas~
+@6 = ~...~
+@7 = ~pomijanie komponentow przedmiotow~
+@8 = ~pomijanie dla IWD~
+@9 = ~zmiany podklas~
+//
+//
+@100 = ~Jeszcze jeden system usprawnien zbroi~
+@110 = ~Ulepszenia kosmetyczne~
+@111 = ~Ujednolicenie Magicznych Przedmiotow~
+@112 = ~Zastapienie Magicznych Przedmiotow Mistrzowskimi~
+@120 = ~Funkcjonalne ulepszenia broni~
+@130 = ~Odroznienie Lekkiej/Ciezkiej Broni (Przestarzale)~
+@140 = ~Ulepszenia przedmiotow IWD~
+@150  = ~Ogranicz Styl Dwoch Broni~
+@151  = ~Styl dwoch broni tylko male bronie~
+@152  = ~Styl dwoch bron male/srednie bronie~
+@160  = ~Wszystkie klasy moga uzywac kazdej mikstury~
+@170  = ~Armored Spellcasting for Bards~
+//
+//
+@10001 = ~^Klasa Pancerza:.+$~
+@10002 = ~Klasa Pancerza: ~
+@10003 = ~Odporność na obrażenia: ~
+@10004 = ~Kara do zręczności: -~
+@10005 = ~Kara do prędkości rzucania czarów: +~
+@10006 = ~Kara do prędkości ataku bronią: +~
+@10007  = ~Movement Speed Penalty: -~
+@10008  = ~Arcane Spell Failure Chance: ~
+@10011 = ~smok~
+@10012 = ~elfi~
+@10013 = ~elficki~
+@10014 = ~sylvański~
+@10015 = ~pieśniarz klingi~
+@10018 = ~szata~
+@10019 = ~płaszcz~
+@10021 = ~Krycie się w cieniu, Kradzież kieszonkowa: -~
+@10022 = ~Otwieranie zamków, Zastawianie pułapek: -~
+@10023 = ~Znajdowanie pułapek, Wykrycie iluzji: -~
+@10030 = ~Zbroja wiary
+
+Poziom: 1
+Sfera: Ochrona
+Zasięg: 0
+Czas działania: 3 rundy + 1 runda/poziom
+Czas rzucania: 1
+Obszar działania: rzucający czar
+Rzut obronny: Brak
+
+Rzucający Zbroję Wiary otrzymuje znaczną ochronę przeciwko atakom wręcz i pociskom. Ta magiczna, przypominająca zbroję osłona, otacza rzucającego i pochłania część przyjętych obrażeń. Dodatkowo zwiększa odporność na obrażenia wszelkiego typu o 10%.~
+@1000 = ~100: Ulepszenia przedmiotow~
+@10101 = ~Mistrzowska strzała~
+@10102 = ~Magiczna strzała~
+@10103 = ~Mistrzowski bełt~
+@10104 = ~Magiczny bełt~
+@10105 = ~Mistrzowski pocisk~
+@10106 = ~Magiczny pociski~
+@10107 = ~Mistrzowski topór bojowy~
+@10108 = ~Magiczny toporek~
+@10109 = ~Mistrzowski cep bojowy~
+@10110 = ~Mistrzowska wekiera~
+@10111 = ~Mistrzowski morgensztern~
+@10112 = ~Magiczny cep bojowy~
+@10113 = ~Magiczny morgensztern~
+@10114 = ~Mistrzowski długi łuk refleksyjny~
+@10115 = ~Mistrzowski długi łuk~
+@10116 = ~Mistrzowski krótki łuk~
+@10117 = ~Magiczny długi łuk refleksyjny~
+@10118 = ~Magiczny długi łuk~
+@10119 = ~Magiczny krótki łuk~
+@10120 = ~Mistrzowski sztylet~
+@10121 = ~Mistrzowska strzałka~
+@10122 = ~Mistrzowska halabarda~
+@10123 = ~Mistrzowski młot bojowy~
+@10124 = ~Mistrzowska proca~
+@10125 = ~Mistrzowska włócznia~
+@10126 = ~Magiczna włócznia~
+@10127 = ~Mistrzowski kij~
+@10128 = ~Magiczny kij~
+@10129 = ~Mistrzowski miecz półtoraręczny~
+@10130 = ~Mistrzowski miecz długi~
+@10131 = ~Mistrzowski miecz krótki~
+@10132 = ~Mistrzowski sejmitar~
+@10133 = ~Mistrzowska katana~
+@10134 = ~Mistrzowskie wakizashi~
+@10135 = ~Mistrzowskie ninja-to~
+@10136 = ~Drusus~
+@10137 = ~Magiczny miecz długi~
+@10138 = ~Magiczny miecz półtoraręczny~
+@10139 = ~Magiczna katana~
+@10140 = ~Mistrzowski miecz oburęczny~
+@10141 = ~Magiczny miecz oburęczny~
+@10142 = ~Mistrzowska kusza ciężka~
+@10143 = ~Mistrzowska kusza lekka~
+@10144 = ~Mistrzowska kolczuga~
+@10145 = ~Mistrzowska zbroja paskowa~
+@10146 = ~Magiczna kolczuga~
+@10147 = ~Mistrzowska zbroja skórzana~
+@10148 = ~Mistrzowska zbroja skórzana ćwiekowana~
+@10149 = ~Magiczna zbroja skórzana~
+@10150 = ~Magiczna halabarda~
+@10151 = ~Mistrzowska tarcza mała~
+@10152 = ~Mistrzowska tarcza średnia~
+@10153 = ~Mistrzowska pawęż~
+@10154 = ~Czerwona tarcza~
+@10155 = ~Mistrzowski puklerz~
+@10156 = ~Magiczna tarcza mała~
+@10157 = ~Magiczna tarcza średnia~
+@10158 = ~Kołczan obfitości~
+@10159 = ~Kołczan obfitości
+Historia tego magicznego kołczana dawno już poszła w zapomnienie, choć prawdopodobnie miała ona coś wspólnego z trudnym do wyjaśnienia, lecz dobrze udokumentowanym brakiem dobrych wytwórców strzał podczas Czasu Niepokojów.
+
+PARAMETRY:
+
+Specjalne:
+– Nieograniczona liczba mistrzowskich strzał
+
+Waga: 0~
+@10160 = ~Futerał obfitości~
+@10161 = ~Futerał obfitości
+Historia tego magicznego futerału na bełty dawno już poszła w zapomnienie, choć prawdopodobnie miała ona coś wspólnego z trudnym do wyjaśnienia, lecz dobrze udokumentowanym brakiem dobrych wytwórców bełtów podczas Czasu Niepokojów.
+
+PARAMETRY:
+
+Specjalne:
+– Nieograniczona liczba mistrzowskich bełtów
+
+Waga: 0~
+@11062 = ~Mistrzowska maczuga~
+@10163 = ~Torba obfitości~
+@10164 = ~Torba obfitości
+Choć ta torba na pociski wyprodukowana z miękkiej tkaniny, jest teraz pusta, to wciąż otacza ją potężna magiczna aura.
+
+PARAMETRY:
+
+Specjalne:
+– Nieograniczona liczba mistrzowskich pocisków
+
+Waga: 0~
+@10165 = ~Magiczny topór bojowy~
+@10166 = ~Sztylet: Serce golema~
+@10167 = ~Magiczny sztylet~
+@10168 = ~Ostrze Suryrisa~
+@10169 = ~Młot bojowy: Ashideena~
+@10170 = ~Młot bojowy: Pięść Boroka~
+@10171 = ~Magiczna zbroja skórzana ćwiekowana~
+@10172 = ~Mistrzowska zbroja płytowa~
+@10173 = ~Mistrzowska pełna zbroja płytowa~
+@10174 = ~Magiczna pełna zbroja płytowa~
+@10175 = ~Magiczna pawęż~
+@10176 = ~Magiczna proca~
+@10177 = ~Varscona~
+@10178 = ~Gwiżdżący miecz~
+@10179 = ~Ostrze wody~
+@10180 = ~Magiczna wekiera~
+@10181 = ~Magiczna maczuga~
+@10182 = ~Bełt do kuszy drowow~
+@10183 = ~Magiczny ceb bojowy drowów~
+@10184 = ~Magiczna halabarda drowów~
+@10185 = ~Magiczna włócznia drowów~
+@10186 = ~Magiczny sejmitar drowów~
+@10187 = ~Magiczny długi łuk drowów~
+@10188 = ~Magiczny młot bojowy drowów~
+@10189 = ~Katana Yoshimo~
+@10190 = ~Magiczna kusza ciężka~
+@10191 = ~Magiczna kusza lekka~
+@10192 = ~Kołczan obfitości
+Historia tego magicznego kołczana dawno już poszła w zapomnienie, choć prawdopodobnie miała ona coś wspólnego z trudnym do wyjaśnienia, lecz dobrze udokumentowanym brakiem dobrych wytwórców strzał podczas Czasu Niepokojów.
+
+PARAMETRY:
+
+Specjalne:
+– Nieograniczona liczba magicznych strzał
+
+Waga: 0~
+@10193 = ~Futerał obfitości
+Historia tego magicznego futerału na bełty dawno już poszła w zapomnienie, choć prawdopodobnie miała ona coś wspólnego z trudnym do wyjaśnienia, lecz dobrze udokumentowanym brakiem dobrych wytwórców bełtów podczas Czasu Niepokojów.
+
+PARAMETRY:
+
+Specjalne:
+– Nieograniczona liczba magicznych bełtów
+
+Waga: 0~
+@10194 = ~Torba obfitości
+Choć ta torba na pociski wyprodukowana z miękkiej tkaniny, jest teraz pusta, to wciąż otacza ją potężna magiczna aura.
+
+PARAMETRY:
+
+Specjalne:
+– Nieograniczona liczba magicznych pocisków
+
+Waga: 0~
+@10195 = ~Kościana maczuga~
+@10196 = ~Zgniatacz~
+@10197 = ~Większy płaszcz ochrony~
+@10198 = ~Ostrze zmierzchu~
+@10199 = ~Fala~
+@10100 = ~Łamacz kolan~
+@10201 = ~Większy pierścień ochrony~
+@10202 = ~Lepszy pierścień ochrony~
+@10203 = ~Tarcza spadających gwiazd~
+@10204 = ~Przebijacz~
+@10205 = ~Włócznia zimorodka~
+@10206 = ~Kondar~
+@10207 = ~Szpon Rashada~
+@10208 = ~Magiczna zbroja płytowa~
+@10701	= ~ ~
+//
+//
+@30102 = ~Ring of Danger Sense
+
+Nizzuf's Maze was a grand hedge maze created by the archmage Nizzuf for his amusement. The maze boasted hundreds of magical traps, most of them extremely lethal. Nizzuf posted a reward big enough to buy a kingdom to the man or woman brave enough to enter the maze and reach its core. Thousands tried and died. But one, Oteg Verm, completed the maze, thanks mainly to this ring which let him "see" where the traps were hidden.
+
+STATISTICS:
+
+Equipped abilities:
+- Detect Traps: +25%
+- 1-point bonus to Armor Class
+- immunity to backstabs
+
+Weight: 0
+~
+@30202 = ~Foik Morur demonstrated the effectiveness of these gloves at a community fair near Beregost several years back. He paid a local Archer to fire arrows at him. As the arrows approached, Foik's hands would move of their own accord, either knocking the arrow away or catching it. He earned more than a few pieces of gold for his troubles, and these earnings attracted some shadowy figures to Foik's tent that evening. The next morning, Foik was found dead and the gloves missing.
+
+NOTE: while these gloves allow the wearer to avoid the base missile damage of a projectile that is caught or deflected, any effects accompanying that projectile, like fire or electricity or poison, may still be applied.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: 3-point bonus vs. missile attacks
+- Deflect first missile attack each round
+
+Weight: 2~
+
+@30402 = ~This was the armor of Seffer Ekr, and a sign of the goddess Mielikki's favor. She had rewarded the ranger's loyalty with the promise that he would never die in battle, and he defied death for many years, holding hordes of monsters back from his home forest. A heart attack claimed him when his time was done, not an enemy's blade.
+
+STATISTICS:
+
+Equipped Abilities:
+ Bark Armor: fast-growing bark grows on the exterior of this armor, providing tough protection that can completely block one physical attack. A successful hit against the wearer dislodges the bark-like growth; it regrows enough to block another hit after one round.
+
+Armor Class: 5
+Weight: 15
+Requires: 4 Strength
+~
+@30602 = ~Though this dark gray cloak appears to be made of stone, it is soft and flexible as cloth. When donned, it allows its wearer to assume a statue-like form once per day. These cloaks are often found among the duergar, who first designed them, but occasionally one winds up on the surface. 
+
+STATISTICS:
+
+Equipped abilities:
+- Physical Damage Resistance: +5%
+- Protects against critical hits
+
+Charge abilities:
+- Stoneskin (2x per day): 5 skins
+  Duration: 1 turn
+
+Weight: 2
+~
+// Azlaer's Harp, replace 30801 with 30802
+@30801 = ~Resist Fear (~
+@30802 = ~Resist Fear, Aid (~
+// Methild's Harp, replace @30811 with either @30812 or @30813
+@30811 = ~Remove Paralysis (~
+@30812 = ~Remove Paralysis/Remove Curse (~
+@30813 = ~Remove Paralysis/Break Enchantment~
+@30912 = ~This is Edwin's birthright, inlaid with his family stone.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize one extra wizard spell of each level
+
+Weight: 1
+~
+@30922 = ~This is Edwin's birthright, inlaid with his family stone.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize extra wizard spells of up to 7th level
+
+Weight: 1
+~
+@31001 = ~Robe of the Weave~
+@31002 = ~Crafted by some of the finest mages and weavers of the Realms, this robe is made from the fibers of plants specially cultivated during the Time of Troubles, and the weave of the robe is woven counter to the magical Weave of Faerun. The resulting robes grant the wearer significant resistance to all spells, and are a favored defensive tool of powerful spellcasters, but beyond just mere magical protection, a robe such as this is a symbol of prestige.
+
+STATISTICS:
+
+Equipped Abilities:
+ Contingency once per day
+ Minor Spell Deflection once per day
+
+(Note: using these powers is indistinguishable from casting the magic spells of the same names. For good or ill, doing can be detected and identified as using arcane magic.)
+
+Weight: 6
+~
+@31111 = ~Ring of Wizardry: Evermemory~
+@31112 = ~Ring of Wizardry: Evermemory
+Long ago, a grand wizard from Amn was rumored to have defied Mystra's limitations on the magical arts. Legends spoke of this wizard being able to cast spells without the limitation of memorization. In the end, it was found that his powers stemmed from the several magical rings that he had made for himself. His proclaimed "everlasting memory" was a hoax, though his rings continue to be one of the most sought-after items in the realms.
+
+STATISTICS:
+
+Equipped abilities:
+– Cast Minor Spell Sequencer up to three times per day
+
+Weight: 0~
+@31113 = ~Ring of Acuity~
+@31114 = ~The origins of this ring are unclear, and while its enchantments share similarities with historical examples of Rings of Wizardry, there is something strange in how it feels, either in the weight of the metal or in the aura it projects, and it does not function the same. It was likely found on some distant plane and, as such, its maker will remain a mystery to you.
+
+STATISTICS:
+
+Equipped abilities:
+– The wearer can cast Spell Sequencer once per day
+
+Weight: 0~
+@31115 = ~Ring of Wizardry: Reaching Ring~
+@31116 = ~Ring of Wizardry: Reaching Ring
+This ring is masterfully enchanted, allowing the wearer to cast more spells than normally possible. It was originally commissioned by spellcaster <CHARNAME>, apparently at great monetary and personal cost.
+
+STATISTICS:
+
+Equipped abilities:
+– The wearer can cast Spell Trigger once per day
+
+Weight: 0~
+@31117 = ~Sorcerian Ring~
+@31118 = ~Sorcerian Ring:  'Grasping Power'
+This ring is undoubtedly the pinnacle of mnemonic lucubration. Crafted at <CHARNAME>'s request from rings of Wizardry, Acuity and Metaspell Influence Amulet it allows the bearer to memorize an extra spell each day for all spell levels from one to seven. In addition, a ring of protection has been melted into the band, providing minor physical and magical defenses.
+
+STATISTICS:
+
+Equipped abilities:
+– The wearer can cast Spell Sequencer and Spell Trigger once per day
+– Can memorize one extra spell of spell levels 1 through 7
+– Armor Class: +1
+– Saving Throws: +1
+
+Weight: 0~
+//
+//
