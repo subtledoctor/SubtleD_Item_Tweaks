@@ -9,7 +9,7 @@
 
 //COPY MARKER FILE_________________________________________________________________
 //
-COPY ~%MOD_FOLDER%/lib/markers/d5_marker.d5~ ~override/d5__echan.d5~
+COPY ~%MOD_FOLDER%/lib/d5_marker.d5~ ~override/d5__echan.d5~
 //__________________________________________________________________________________
 
 
