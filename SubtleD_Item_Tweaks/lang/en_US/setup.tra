@@ -27,7 +27,10 @@
 @1020 = ~Proper Missile Deflection for the Gloves of Missile Snaring~
 @1030 = ~Improve Detonating Weapons~
 @1040 = ~Add Revised Barkskin to 'Skin of the Forest' Armor~
-@1050 = ~Make IR's Rod of Absorption Truly Instantaneous~
+@1050 = ~Change IR's Rod of Absorption~
+@1051 = ~...Instantaneous Use~
+@1052 = ~...Longer Protection~
+@1055 = ~Permanent Fear Protection for the Badge of the Brave~
 @1060 = ~Make the Gargoyle Cloak Apply Stoneskin Instead of an AC Bonus~
 @1070 = ~Make the Dwarven Thrower Hammer Usable by Non-Dwarves~
 @1080 = ~Improve Azlaer's Harp and Methild's Harp~
@@ -36,10 +39,12 @@
 @1092 = ~Limit Bonus Slots to 7th Level Spells~
 @1093 = ~Only +1 Bonus Slots AND Limited to 7th Level~
 @1100 = ~Metamagic Instead of MR for Cloak of the Weave~
+@1106 = ~Rings of Wizardry cast Spell Sequencers~
+@1107 = ~Only Evermemory + Kontik's Ring cast Spell Sequencer~
+@1109 = ~Free 1st-level Spellcasting for Some Items~
 @1110 = ~Change Rings of Wizardry~
-@1111 = ~Rings of Wizardry cast Spell Sequencers~
-@1112 = ~Only Evermemory + Kontik's Ring cast Spell Sequencer~
 @1113 = ~Replace Evermemory with a Ring of Acuity~
+@1114 = ~Replace the Ring of Acuity with Evermemory~
 //
 //
 @10001  = ~^Armor Class:.+$~

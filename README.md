@@ -129,9 +129,17 @@
   <div class="section">
     <p>This leather armor will now act like a permanent version of the modified Barskin spell described above, absorbing one physical attack each round.</p>
   </div>
-  <h4 class="subheader">Component 1050: Make IR's Rod of Absorption Truly Instantaneous (EE-only)</h4>
+  <h4 class="subheader">Component 1051: Make IR's Rod of Absorption Truly Instantaneous (EE-only)</h4>
   <div class="section">
     <p>The Rod of Absorption in Item Revisions only lasts a single round, and can be triggered instantaneously to intercept an incoming spell. This component changes the item to use target mode 7 so that it can truly be used instantaneously, regardless of the other spells or attacks the wielder has performed in the preceding round.</p>
+  </div>
+  <h4 class="subheader">Component 1052: Give IR's Rod of Absorption a longer duration (EE-only)</h4>
+  <div class="section">
+    <p>The Rod of Absorption in Item Revisions only lasts a single round, and can be triggered instantaneously to intercept an incoming spell. This component changes the item to provide protection for five rounds.</p>
+  </div>
+  <h4 class="subheader">Component 1055: Tweak the Badge of the Brave</h4>
+  <div class="section">
+    <p>This gives permanent Fear protection to the Badge of the Brave, in addition to its existing effects.</p>
   </div>
   <h4 class="subheader">Component 1060: Tweak the Cloak of the Gargoyle (IR-only)</h4>
   <div class="section">

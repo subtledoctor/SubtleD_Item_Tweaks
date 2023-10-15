@@ -247,6 +247,38 @@ IF_EXISTS BUT_ONLY
 END
 //__________________________________________________________________________________
 
+DEFINE_ACTION_FUNCTION longer_rod_absorb BEGIN
+
+COPY_EXISTING ~rods01.spl~ ~override~
+	LPF ALTER_EFFECT INT_VAR match_opcode = 259 duration = 60 END
+IF_EXISTS BUT_ONLY
+
+END
+//__________________________________________________________________________________
+
+
+// Badge of the Brave_______________________________________________________________
+//
+DEFINE_ACTION_FUNCTION tweak_brave_badge BEGIN
+
+COPY_EXISTING ~amulbra.itm~ ~override~
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 161 target = 1 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 106 target = 1 parameter1 = 1 parameter2 = 1 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 23 target = 1 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 106 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 24 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 101 target = 1 parameter2 = 23 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 169 target = 1 parameter2 = 36 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 240 target = 1 parameter2 = 36 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = 14007 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 267 target = 1 parameter1 = 17427 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 328 target = 1 parameter2 = 106 timing = 2 END
+  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 278 target = 1 parameter1 = 1 parameter2 = 0 timing = 2 END
+IF_EXISTS BUT_ONLY
+
+END
+//__________________________________________________________________________________
+
 
 // Gargoyle Cloak___________________________________________________________________
 //
@@ -363,6 +395,116 @@ END
 //__________________________________________________________________________________
 
 
+// free casting for some items______________________________________________________
+//
+DEFINE_ACTION_FUNCTION tweak_casting_items BEGIN
+
+// cloak of the weave
+// robe of enfusing
+// evermemory (if not evermemory-->acuity)
+// edion's/kontick's rings
+// bard's/wondrous gloves
+// band of the forest
+// ring of holiness?
+// holy symbols??
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~urobe1a.itm~) BEGIN
+  COPY_EXISTING ~urobe1a.itm~ ~override~
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~z0robe99.itm~) BEGIN
+  COPY_EXISTING ~z0robe99.itm~ ~override~
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~clck15.itm~) BEGIN
+  COPY_EXISTING ~clck15.itm~ ~override~
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~brac24.itm~) BEGIN
+  COPY_EXISTING ~brac24.itm~ ~override~
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~brac25.itm~) BEGIN
+  COPY_EXISTING ~brac25.itm~ ~override~
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~ring03.itm~) BEGIN
+  COPY_EXISTING ~ring03.itm~ ~override~
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5shm-1~ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~ring22.itm~) BEGIN
+  COPY_EXISTING ~ring22.itm~ ~override~
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5shm-1~ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~ring08_.itm~) BEGIN
+  COPY_EXISTING ~ring08_.itm~ ~override~
+    LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
+//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+END
+
+ACTION_IF !(FILE_EXISTS_IN_GAME ~ring08_.itm~) BEGIN
+ ACTION_IF !(MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) BEGIN
+  COPY_EXISTING ~ring40.itm~ ~override~
+    LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
+//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+ END
+ ACTION_IF (MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) OR (GAME_IS ~bgee~) BEGIN
+  COPY_EXISTING ~ring08.itm~ ~override~
+    LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
+//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~bdring08.itm~) BEGIN
+  COPY_EXISTING ~bdring08.itm~ ~override~
+    LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
+//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~ringkon.itm~) BEGIN
+  COPY_EXISTING ~ringkon.itm~ ~override~
+    LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
+//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-2~ END
+  ACTION_IF (FILE_EXISTS_IN_GAME ~mh#iwd11.itm~) BEGIN
+    COPY_EXISTING ~ringkon.itm~ ~override/mh#iwd11.itm~
+  END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~ringed.itm~) BEGIN
+  COPY_EXISTING ~ringed.itm~ ~override~
+    LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
+//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-5~ END
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~mh#iwd11.itm~) BEGIN
+  ACTION_IF !(FILE_EXISTS_IN_GAME ~ringkon.itm~) BEGIN
+    COPY_EXISTING ~mh#iwd11.itm~ ~override~
+    LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
+//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-5~ END   
+  END
+END
+
+END	//	end function
+//__________________________________________________________________________________
+
+
 // rings of wizardry-->sequencers___________________________________________________
 //
 DEFINE_ACTION_FUNCTION tweak_rings_of_wizardry BEGIN
@@ -458,16 +600,40 @@ END
 //
 DEFINE_ACTION_FUNCTION tweak_evermemory_acuity BEGIN
 
-ACTION_IF !(FILE_EXISTS_IN_GAME ~ring08_.itm~) BEGIN
-  COPY_EXISTING ~ring40.itm~ ~override/ring08.itm~
+ACTION_IF !(MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~ring08_.itm~) BEGIN
+    COPY_EXISTING ~ring40.itm~ ~override/ring08_.itm~
+  END
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdring08.itm~) BEGIN
+    COPY_EXISTING ~ring40.itm~ ~override/bdring08.itm~
+  END
+END
+ACTION_IF (MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~ring08_.itm~) BEGIN
+    COPY_EXISTING ~ring08.itm~ ~override/ring08_.itm~
+  END
+  ACTION_IF (FILE_EXISTS_IN_GAME ~bdring08.itm~) BEGIN
+    COPY_EXISTING ~ring08.itm~ ~override/bdring08.itm~
+  END
 END
 
-ACTION_IF (FILE_EXISTS_IN_GAME ~ring08_.itm~) BEGIN
-  COPY_EXISTING ~ring40.itm~ ~override/ring08_.itm~
 END
+//__________________________________________________________________________________
 
-ACTION_IF (FILE_EXISTS_IN_GAME ~bdring08.itm~) BEGIN
-  COPY_EXISTING ~ring40.itm~ ~override/bdring08.itm~
+
+// acuity-->evermemory______________________________________________________________
+//
+DEFINE_ACTION_FUNCTION tweak_acuity_evermemory BEGIN
+
+ACTION_IF !(MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~ring08_.itm~) BEGIN
+    COPY_EXISTING ~ring08_.itm~ ~override/ring40.itm~
+  END
+END
+ACTION_IF (MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~ring08_.itm~) BEGIN
+    COPY_EXISTING ~ring08_.itm~ ~override/ring08.itm~
+  END
 END
 
 END

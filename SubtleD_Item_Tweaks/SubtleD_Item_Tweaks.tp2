@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/SubtleD_Item_Tweaks~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.1~
+VERSION ~v1.2~
 
 ALWAYS
 
@@ -214,13 +214,34 @@ LAF forest_leather_armor END
 
 //____________________________________________________________________________________
 
-BEGIN @1050
-DESIGNATED 1050
+BEGIN @1051
+DESIGNATED 1051
+SUBCOMPONENT @1050
 REQUIRE_PREDICATE (ENGINE_IS ~bgee bg2ee iwdee eet~) @1 
 REQUIRE_PREDICATE (MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) @1
 INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
 
 LAF instant_rod_absorb END
+
+//____________________________________________________________________________________
+
+BEGIN @1052
+DESIGNATED 1052
+SUBCOMPONENT @1050
+REQUIRE_PREDICATE (ENGINE_IS ~bgee bg2ee iwdee eet~) @1 
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) @1
+INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
+
+LAF longer_rod_absorb END
+
+//____________________________________________________________________________________
+
+BEGIN @1055
+DESIGNATED 1055
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~amulbra.itm~) @1
+INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
+
+LAF tweak_brave_badge END
 
 //____________________________________________________________________________________
 
@@ -286,18 +307,18 @@ LAF tweak_cloak_of_the_weave END
 /*
 //____________________________________________________________________________________
 
-BEGIN @1111
-DESIGNATED 1111
-SUBCOMPONENT @1110
+BEGIN @1106
+DESIGNATED 1106
+SUBCOMPONENT @1105
 INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
 
 LAF tweak_rings_of_wizardry END
 
 //____________________________________________________________________________________
 
-BEGIN @1112
-DESIGNATED 1112
-SUBCOMPONENT @1110
+BEGIN @1107
+DESIGNATED 1107
+SUBCOMPONENT @1105
 REQUIRE_PREDICATE (GAME_IS ~eet~) @1
 INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
 
@@ -306,12 +327,32 @@ LAF tweak_evermemory_sequencer END
 //____________________________________________________________________________________
 */
 
+BEGIN @1109
+DESIGNATED 1109
+//SUBCOMPONENT @1105
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~d5zclons.2da~) @1
+
+LAF tweak_casting_items END
+
+//____________________________________________________________________________________
+
 BEGIN @1113
 DESIGNATED 1113
-//SUBCOMPONENT @1110
+SUBCOMPONENT @1110
 REQUIRE_PREDICATE (GAME_IS ~eet~) @1
 INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
 
 LAF tweak_evermemory_acuity END
 
 //____________________________________________________________________________________
+
+BEGIN @1114
+DESIGNATED 1114
+SUBCOMPONENT @1110
+REQUIRE_PREDICATE (GAME_IS ~eet~) @1
+INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
+
+LAF tweak_acuity_evermemory END
+
+//____________________________________________________________________________________
+
