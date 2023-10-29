@@ -9,7 +9,7 @@
 <body>
 <h1>SubtleMods: SubtleD's Item Tweaks</h1>
 <div class="section">
-  <p><strong> Version 1.0 </strong><br />
+  <p><strong> Version 1.3 </strong><br />
   <strong> Languages:</strong> English</p>
   <p><strong>Author: <a href="http://forums.gibberlings3.net/index.php?showuser=6306">The Subtle Doctor</a></strong></p>
   <p><strong><a href="https://github.com/subtledoctor/SubtleD_Item_Tweaks/releases">Home page</a></strong></p>

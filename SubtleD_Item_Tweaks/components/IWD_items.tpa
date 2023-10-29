@@ -11,8 +11,14 @@ DEFINE_ACTION_FUNCTION iwd_weapon_tweaks BEGIN
 //random little stuff_______________________________________________________________
 //
 ACTION_IF (GAME_IS ~iwdee~) BEGIN
-  COPY ~%MOD_FOLDER%/data/misc/iwdee/bknight.itm~ ~override~
-  COPY ~%MOD_FOLDER%/data/misc/iwdee/bishop.itm~ ~override~
+  COPY ~%MOD_FOLDER%/data/iwdee/bknight.itm~ ~override~
+  COPY ~%MOD_FOLDER%/data/iwdee/bishop.itm~ ~override~
+END
+ACTION_IF (MOD_IS_INSTALLED ~SETUP-IWD1_EET.TP2~ ~1~) BEGIN
+  COPY_EXISTING ~bknight.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR drained = 0 flag_recharge = 1 END
+  COPY_EXISTING ~bishop.itm~ ~override~
+    LPF ALTER_ITEM_HEADER INT_VAR drained = 0 flag_recharge = 1 END
 END
 
 COPY_EXISTING ~quost.itm~ ~override~
@@ -24,7 +30,7 @@ COPY_EXISTING ~quost.itm~ ~override~
 //less-ramdomized loot______________________________________________________________
 //
 ACTION_IF (GAME_IS ~iwdee~) BEGIN
-  COPY ~%MOD_FOLDER%/data/misc/iwdee/rndtres.2da~ ~override~
+  COPY ~%MOD_FOLDER%/data/iwdee/rndtres.2da~ ~override~
 END
 
 ACTION_IF (MOD_IS_INSTALLED ~SETUP-IWD1_EET.TP2~ ~1~) BEGIN
