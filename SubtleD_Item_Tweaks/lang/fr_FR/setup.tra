@@ -1,0 +1,378 @@
+@1   = ~ignore le composant~
+@2   = ~ignore le composant non-EE~ //unused
+@3   = ~deja inclus~
+@4   = ~ignore les composants d'ajustement~ //unused
+@5   = ~ignore les composants qui ajoutent de nouveaux kits~ //unused
+@6   = ~...~
+@7   = ~ignore les composants concernant les objets~ //unused
+@8   = ~ignore pour IWD~
+@9   = ~modification de kit~ //unused
+//
+//
+@100   = ~Encore une autre revision du systeme d'armure (YARAS)~
+@110   = ~Ajustements sur l'esthetique et les enchantements~
+@111   = ~Standardiser l'equipement enchante~
+@112   = ~Remplacer l'equipement enchante par des armes de maitre~
+@120   = ~Ajustements fonctionnels des armes~
+@130   = ~Distinction des armes legeres/lourdes (DEPRECIE)~ //unused
+@140   = ~Ajustement des objets de IWD~
+@150   = ~Restrictions du combat a deux armes~
+@151   = ~Combat a deux armes seulement avec des armes de petite taille~
+@152   = ~Combat a deux armes avec des armes de petite ou moyenne taille~
+@160   = ~Toutes les potions sont utilisables par toutes les classes~
+@170   = ~Lancer de sorts en armure pour les bardes~
+//
+@1000  = ~Donner deux APR aux armes creees par des sorts~
+@1010 = ~Ajouter une immunite aux attaques sournoises a l'Anneau de perception du danger~
+@1020 = ~Donner une vraie deviation des projectiles aux Bracelets antiprojectiles~
+@1030 = ~Ameliorer les armes avec effet de detonation~
+@1040 = ~Ajouter un effet de Peau d'ecorce 'revise' a l'Armure de la foi +3~
+@1050 = ~Modifie le Baton d'absorption d'Item Revisions~
+@1051 = ~...Utilisation instantanee~
+@1052 = ~...Protection plus longue~
+@1055 = ~Protection contre la peur permanente sur la Broche des braves~
+@1060 = ~Modifier la Cape de gargouille pour appliquer un effet de Peau de pierre au lieu d'un bonus a la classe d’armure~
+@1070 = ~Rendre les marteaux de jet nains utilisables par les non-nains~
+@1080 = ~Ameliorer la Harpe d'Azlaer et la Harpe de Methild~
+@1090 = ~Degrader l'amulette d'Edwin~
+@1091 = ~Un seul emplacement de sort bonus par niveau de sorts~
+@1092 = ~Limiter les emplacements de sorts bonus aux sorts de niveau 7~
+@1093 = ~Un seul emplacement de sort bonus par niveau de sorts ET limiter au niveau 7~
+@1100 = ~Remplacer la resistance a la magie par de la metamagie pour la Robe de la toile~
+@1106 = ~Les anneaux de magie arcane lancent des sequenceurs de sorts~
+@1107 = ~Seuls la Memoire eternelle et l'anneau de Kontik lancent des sequenceurs de sorts~
+@1109 = ~Lancer de sort de 1er niveau gratuit avec certains objets~
+@1110 = ~Modifier les anneaux de magie arcane~
+@1113 = ~Remplacer la Memoire eternelle par un anneau de precision~
+@1114 = ~Remplacer l'Anneau de precision par Memoire eternelle~
+//
+//
+// 1. detection de langue - duplique armor.tra
+// 2. remplacement par @10002 + additions
+@10001  = ~^\(Classe d'armure[^:]*:.+\)\|\(Armor Class:.+\)$~
+@10002  = ~Classe d'armure : ~
+@10003  = ~Résistance aux dégâts : ~
+@10004  = ~Pénalité à la dextérité : -~
+@10005  = ~Pénalité au temps d'incantation profane : +~
+@10006  = ~Pénalité au facteur de vitesse d'arme : +~
+@10007  = ~Pénalité à la vitesse de déplacement : -~
+@10008  = ~Risque d'échec des sorts profanes : ~
+// used to detect dragon scale armor?
+@10011  = ~[Dd]ragon~
+@10012  = ~elfe\|elfique\|[Ee]lven~
+@10013  = ~elfe\|elfique\|[Ee]lven~
+@10014  = ~sylvestre\|[Ss]ylvan~
+@10015  = ~[Cc]hantelame\|[Bb]ladesinger~
+@10018  = ~robe~ //unused
+@10019  = ~manteau~ // unused
+@10021  = ~Discrétion, Pickpocket : -~
+@10022  = ~Crochetage, Pose de pièges : -~
+@10023  = ~Détection des pièges, Détection des illusions : -~
+@10030  = ~Armure de la foi
+
+Niveau : 1
+Sphère : Protection
+Portée : 0
+Durée : 3 rounds + 1 round par niveau
+Temps d'incantation : 1
+Zone d'effet : Lanceur
+Jet de sauvegarde : aucun
+
+Ce sort procure une protection contre les attaques de mêlée et magiques. Cette armure magique absorbe une partie des dommages destinés au porteur.
+Il accorde un bonus de 10 % à la résistance aux dégâts contre tous les types de dégâts.~
+@10101   = ~Flèches de maître~
+@10102   = ~Flèches enchantées~
+@10103   = ~Carreaux de maître~
+@10104   = ~Carreaux enchantés~
+@10105   = ~Billes de fronde de maître~
+@10106   = ~Billes de fronde enchantées~
+@10107   = ~Hache de guerre de maître~
+@10108   = ~Hache de jet enchantée~
+@10109   = ~Fléau d'armes de maître~
+@10110   = ~Masse d'armes de maître~
+@10111   = ~Étoile du matin de maître~
+@10112   = ~Fléau d'armes enchanté~
+@10113   = ~Étoile du matin enchantée~
+@10114   = ~Arc long composite de maître~
+@10115   = ~Arc long de maître~
+@10116   = ~Arc court de maître~
+@10117   = ~Arc long composite enchanté~
+@10118   = ~Arc long enchanté~
+@10119   = ~Arc court enchanté~
+@10120   = ~Dague de maître~
+@10121   = ~Fléchettes de maître~
+@10122   = ~Hallebarde de maître~
+@10123   = ~Marteau de guerre de maître~
+@10124   = ~Fronde de maître~
+@10125   = ~Lance de maître~
+@10126   = ~Lance enchantée~
+@10127   = ~Bâton de maître~
+@10128   = ~Bâton enchanté~
+@10129   = ~Épée bâtarde enchantée~
+@10130   = ~Épée longue de maître~
+@10131   = ~Épée courte de maître~
+@10132   = ~Cimeterre de maître~
+@10133   = ~Katana de maître~
+@10134   = ~Wakizashi de maître~
+@10135   = ~Ninja-to de maître~
+@10136   = ~Drusus~
+@10137   = ~Épée longue enchantée~
+@10138   = ~Épée bâtarde enchantée~
+@10139   = ~Katana enchanté~
+@10140   = ~Épée à deux mains de maître~
+@10141   = ~Épée à deux mains enchantée~
+@10142   = ~Arbalète lourde de maître~
+@10143   = ~Arbalète légère de maître~
+@10144   = ~Cotte de mailles de maître~
+@10145   = ~Armure feuilletée de maître~
+@10146   = ~Cotte de mailles enchantée~
+@10147   = ~Armure de cuir de maître~
+@10148   = ~Besantine de maître~
+@10149   = ~Armure de cuir enchantée~
+@10150   = ~Hallebarde enchantée~
+@10151   = ~Rondache de maître~
+@10152   = ~Écu de maître~
+@10153   = ~Grand bouclier de maître~
+@10154   = ~Armée du Salut~
+@10155   = ~Targe de maître~
+@10156   = ~Rondache enchantée~
+@10157   = ~Écu enchanté~
+@10158   = ~Carquois d'abondance~
+@10159   = ~Le Carquois d'abondance
+Les origines de ce carquois ont été oubliées depuis longtemps, mais on peut supposer sans trop de risque qu'il existe un lien entre lui et l'étrange pénurie de fabricant de flèches au cours du Temps des Troubles.
+
+PARAMÈTRES
+
+Capacités d'équipement :
+- flèches de maître illimitées
+
+Poids : 0~
+@10160   = ~Étui d'abondance~
+@10161   = ~L'Étui d'abondance
+L'histoire de cet étui magique s'est perdue dans le brouillard du passé, mais elle doit sans aucun doute être liée à l'inexplicable pénurie de fabricants de flèches au cours du Temps des Troubles.
+
+PARAMÈTRES
+
+Capacité d'équipement :
+- carreaux de maître illimités
+
+Poids : 0~
+@10162   = ~Gourdin de maître~
+@10163   = ~Sac d'abondance~
+@10164   = ~Le Sac d'abondance
+Cette petite poche de tissu est vide, mais cela ne l'empêche pas de rayonner d'une puissante aura magique.
+PARAMÈTRES :
+
+Capacités d'équipement :
+- billes de maître illimitées
+
+Poids : 0~
+@10165   = ~Hache d'armes enchantée~
+@10166   = ~Dague : Cœur du Golem~
+@10167   = ~Dague enchantée~
+@10168   = ~Lame de Suryris~
+@10169   = ~Marteau de guerre : Ashideena~
+@10170   = ~Marteau de guerre : Poing de Borok~
+@10171   = ~Besantine enchantée~
+@10172   = ~Armure de plates de maître~
+@10173   = ~Armure de plates complète de maître~
+@10174   = ~Armure de plaques complètes enchantée~
+@10175   = ~Grand bouclier enchanté~
+@10176   = ~Fronde enchantée~
+@10177   = ~Varscona~
+@10178   = ~Épée courte enchantée~
+@10179   = ~Bord de l'eau~
+@10180   = ~Masse d'armes enchantée~
+@10181   = ~Gourdin enchanté~
+@10182   = ~Carreaux d'arbalète drow~
+@10183   = ~Fléau d'armes drow enchanté~
+@10184   = ~Hallebarde drow enchantée~
+@10185   = ~Lance drow enchantée~
+@10186   = ~Cimeterre drow enchanté~
+@10187   = ~Épée longue drow enchantée~
+@10188   = ~Marteau de guerre enchanté~
+@10189   = ~Katana de Yoshimo~
+@10190   = ~Arbalète lourde enchantée~
+@10191   = ~Arbalète légère enchantée~
+@10192   = ~Le Carquois d'abondance
+Les origines de ce carquois ont été oubliées depuis longtemps, mais on peut supposer sans trop de risque qu'il existe un lien entre lui et l'étrange pénurie de fabricant de flèches au cours du Temps des Troubles.
+
+PARAMÈTRES
+
+Capacités d'équipement :
+- flèches enchantées illimitées
+
+Poids : 0~
+@10193   = ~L'Étui d'abondance
+L'histoire de cet étui magique s'est perdue dans le brouillard du passé, mais elle doit sans aucun doute être liée à l'inexplicable pénurie de fabricants de flèches au cours du Temps des Troubles.
+
+PARAMÈTRES
+
+Capacité d'équipement :
+- carreaux enchantés illimités
+
+Poids : 0~
+@10194   = ~Le Sac d'abondance
+Cette petite poche de tissu est vide, mais cela ne l'empêche pas de rayonner d'une puissante aura magique.
+PARAMÈTRES :
+
+Capacités d'équipement :
+- billes enchantées illimitées
+
+Poids : 0~
+@10195   = ~Gourdin d'os~
+@10196   = ~Mâchouilleuse~
+@10197   = ~Cape majeure Protection~
+@10198   = ~Brumenoire~
+@10199   = ~Vague~
+@10200   = ~Le Casse-genou~
+@10201   = ~Anneau majeur de protection~
+@10202   = ~Anneau supérieur de protection~
+@10203   = ~Bouclier des étoiles déchues~
+@10204   = ~Empaleur~
+@10205   = ~Lance halcyonienne~
+@10206   = ~Kondar~
+@10207   = ~Serre de Rashad~
+@10208   = ~Armure de plates enchantée~
+@10701	= ~ ~
+//
+//
+// Search in BARD class description/ Replace 11010 with 11020
+@11010 = ~les sorts ne peuvent être lancés en armure~
+@11020 = ~les sorts ne peuvent être lancés en armure plus lourde qu'une besantine~
+//
+//
+@30102 = ~Anneau de perception du danger
+
+Le dédale de Nizzuf était un immense labyrinthe de jardin créé par l'archimage Nizzuf pour son plaisir personnel. Il contenait des centaines de pièges magiques, mortels pour la plupart. Nizzuf promit une récompense de roi à qui serait assez courageux pour entrer dans le dédale et atteindre son centre. Des milliers de gens sont morts en essayant, mais un seul, Oteg Verm, parvint au bout de l'épreuve, essentiellement grâce à son anneau qui lui permettait de « voir » où étaient cachés les pièges.
+
+PARAMÈTRES
+
+Capacités d'équipement :
+- Détection des pièges : +25 %
+- CA +1
+- Immunité aux Attaques sournoises
+
+Poids : 0~
+@30202 = ~Foik Morur a démontré l'efficacité de ces gants lors d'une foire de village près de Bérégost il y a quelques années. Il avait payé un archer local pour lui tirer dessus. Chaque fois qu'une flèche venait sur lui, ses mains semblaient bouger de leur propre volonté pour l'écarter ou la saisir. Son spectacle lui valu un beau paquet de pièces d'or, et ces gains attirèrent de sombres silhouettes à sa tente une fois la nuit tombée. Le lendemain matin, on le trouva mort, et ses gants avaient disparu.
+
+NOTE :même si ces gants permettent à leur porteur d'éviter les dégâts de base du projectile qui est bloqué ou dévié, les effets qui accompagnent le projectile, comme le feu, l'électricité ou le poison, peuvent malgré tout être appliqués.
+
+PARAMÈTRES :
+
+- CA : bonus de 3 contre les projectiles
+- Dévie la première attaque de projectile chaque round.
+
+Poids : 2~
+
+@30402 = ~Cette armure était celle de Seffer Ekr, et un signe de la faveur de la déesse Mielikki. Elle avait récompensé sa loyauté en lui promettant que jamais il ne mourrait au combat, et pendant des années il défia la mort, repoussant de sa forêt les hordes des orques. Quand son temps fut venu, il succomba non pas à la lame d'un adversaire, mais à une crise cardiaque.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+ Armure d'écorce : de l'écorce pousse rapidement à la surface de cette armure, et accorde une solide protection qui bloque complètement une attaque physique. Une attaque réussie contre le porteur décroche l'écorce ; elle repousse assez pour repousser une autre attaque au bout d'un round.
+
+Classe d'armure : 5
+Poids : 15
+Nécessite : 4 en Force
+~
+@30602 = ~Cape de gargouille
+Alors que cette cape gris foncé semble être faite de pierre, elle est douce et aussi souple que du tissu. Quand elle est portée, elle permet à son porteur de prendre une forme ressemblant à une statue une fois par jour.
+Ces capes sont répandues chez les duergars, qui les ont inventés, mais l’une d'entre elles trouvera parfois son chemin jusqu'à la surface.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- Résistance aux dégâts physiques : +5 %
+- Protection contre les coups critiques
+
+Capacités de charge :
+- Peau de pierre (2x par jour) : 5 peaux
+  Durée 1 tour
+
+Poids : 2
+~
+// Azlaer's Harp, replace 30801 with 30802
+@30801 = ~Dissipation de la terreur~
+@30802 = ~Dissipation de la terreur et Aide~
+// Methild's Harp, replace @30811 with either @30812 or @30813
+@30811 = ~Dissipe les sorts d'immobilisation~
+@30812 = ~Dissipe les sorts d'immobilisation et les malédictions,~
+@30813 = ~Dissipe les sorts d'immobilisation et annule les enchantements et malédictions,~
+@30912 = ~Ce bijou de famille atteste du droit de naissance d'Edwin.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+– Cette amulette accorde à Edwin un bonus exceptionnel d'un sort mémorisable supplémentaire par niveau.
+
+Poids : 1
+~
+@30922 = ~Ce bijou de famille atteste du droit de naissance d'Edwin.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+– Cette amulette accorde à Edwin des sorts mémorisables supplémentaires jusqu'au niveau 7.
+
+Poids : 1
+~
+@31001 = ~Robe de la Toile~
+@31002 = ~Conçues par les meilleurs mages et tisserands des Royaumes, ces robes sont faites de fibres provenant de plantes spécialement cultivées durant le Temps des Troubles, et la structure de la robe est tissée pour contrer la Toile magique de Féérune. Les robes en résultant accordent au porteur une résistance significative aux sortilèges, et elles comptent parmi les moyens de défense privilégiés des lanceurs de sorts les plus puissants, d'autant plus qu'au-delà de la simple protection magique, une robe comme celle-ci est un véritable symbole de prestige.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+- Contingence une fois par jour
+- Déviation de Sorts Mineure une fois par jour
+
+(Note : l'utilisation de ces sorts est en tout point semblable au fait de lancer les sorts de même nom. Les utiliser pourra être détecté et identifié comme une utilisation de magie arcane, que ce soit pour le meilleur ou pour le pire)
+
+Poids : 6
+~
+@31111 = ~La Mémoire éternelle~
+@31112 = ~Anneau des Arcanes : La Mémoire Éternelle
+On raconte que jadis, un grand magicien Amnien défia les pouvoirs magiques de Mystra. Des légendes racontent que ce magicien était doué d'une capacité de mémorisation illimitée pour lancer des sorts. Il s'avéra finalement que son pouvoir provenait de plusieurs anneaux magiques qu'il s'était fabriqué. Sa prétendue « mémoire infinie » n'était qu'une plaisanterie, mais ses anneaux continuent de figurer parmi les objets les plus recherchés des Royaumes.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+– permet de lancer Séquenceur mineur trois fois par jour
+
+Poids : 0~
+@31113 = ~Anneau de précision~
+@31114 = ~L'Anneau de précision
+Les origines de cet anneau sont entourées de mystère et, même si ses enchantements sont similaires à ceux d'autres Anneaux des Arcanes, il y a quelque chose d'étrange dans la sensation procurée, que cela soit au niveau du poids, du métal ou de son aura. Le fonctionnement semble également différent. Comme il a été certainement trouvé dans un plan éloigné, son créateur restera sans doute inconnu.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+– permet de lancer Séquenceur de sorts une fois par jour
+
+Poids : 0~
+@31115 = ~Anneau des arcanes~
+@31116 = ~Anneau des arcanes
+Cet anneau a été enchanté par un maître, il permet à son porteur de mémoriser plus de sorts que la normale. Il fut commandé par <CHARNAME>, visiblement à grands frais.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+– permet de lancer Déclencheur de sort une fois par jour
+
+Poids : 0~
+// item_upgrades @186
+@31117 = ~Anneau Ensorceleur~
+@31118 = ~Anneau Ensorceleur : « Saisir le pouvoir »
+Cet anneau est sans aucun doute le sommet de l'aide à la mémorisation. Forgé à la requête de <CHARNAME> à partir d'Anneaux des arcanes et de précision, ainsi que de l'Amulette d'influence sur les méta-sorts, il permet au porteur de mémoriser un sort de plus chaque jour pour tous les niveaux de sorts de un à sept. De plus, un Anneau de protection y a été fondu, apportant des défenses physiques et magiques mineures.
+
+PARAMÈTRES :
+
+Capacités d'équipement :
+– permet de lancer Séquenceur de sorts et Déclencheur de sort une fois par jour
+– mémorisation d'un sort profane supplémentaire pour les niveaux un à sept
+– classe d'armure : bonus de 1
+– jets de sauvegarde : bonus de 1
+
+Poids : 0~
+//
+//

@@ -1,3 +1,4 @@
-@10001  = ~^Classe d'Armure:.+$~
-@10011  = ~dragon~
-@10012  = ~Elfe~
+@10001  = ~^\(Classe d'armure[^:]*:.+\)\|\(Armor Class:.+\)$~ // because not everything will be translated ina multi-mod install:/
+@10011  = ~[Dd]ragon~
+// eg. "cotte de mailles elfique" or"cotte de mailles elfe noir"
+@10012  = ~elfe\|elfique\|[Ee]lven~ //there might be some items with english description
