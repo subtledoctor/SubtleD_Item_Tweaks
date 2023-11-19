@@ -18,11 +18,12 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 	READ_SHORT 0x1c type
 	PATCH_IF (%prof% = 96) BEGIN // daggers
 	  LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=5 dicenumber=1 END
-	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN // loop through descriptions
+	  LPF ALTER_ITEM_HEADER INT_VAR header_type=2 dicesize=5 dicenumber=1 END
+	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN
 		READ_LONG "%index%" "valid"
-		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN // verify description is valid
+		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN
 		  READ_STRREF "%index%" "description"
-		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~1d6~) = 0 BEGIN // more validation
+		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~1d4~) = 0 BEGIN
 			INNER_PATCH_SAVE new_desc ~%description%~ BEGIN
 			  REPLACE_TEXTUALLY ~1d4~ ~1d5~
 			END
@@ -39,11 +40,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 	END
 	PATCH_IF (%prof% = 98) BEGIN // spears
 	  LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=10 dicenumber=1 END
-	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN // loop through descriptions
+	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN
 		READ_LONG "%index%" "valid"
-		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN // verify description is valid
+		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN
 		  READ_STRREF "%index%" "description"
-		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~1d6~) = 0 BEGIN // more validation
+		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~1d6~) = 0 BEGIN
 			INNER_PATCH_SAVE new_desc ~%description%~ BEGIN
 			  REPLACE_TEXTUALLY ~1d6~ ~1d10~
 			END
@@ -55,11 +56,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 /*
 	PATCH_IF (%prof% = 99) BEGIN // halberds
 	  LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=5 dicenumber=2 END
-	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN // loop through descriptions
+	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN
 		READ_LONG "%index%" "valid"
-		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN // verify description is valid
+		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN
 		  READ_STRREF "%index%" "description"
-		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~1d10~) = 0 BEGIN // more validation
+		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~1d10~) = 0 BEGIN
 			INNER_PATCH_SAVE new_desc ~%description%~ BEGIN
 			  REPLACE_TEXTUALLY ~1d10~ ~2d5~
 			END
@@ -93,11 +94,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 	READ_SHORT ~0x1c~ ~type~
 	PATCH_IF (~%type%~ = ~14~) BEGIN // bullets
 	  LPF ALTER_ITEM_HEADER INT_VAR header_type=2 damage_type=2 END
-	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN // loop through descriptions
+	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN
 		READ_LONG "%index%" "valid"
-		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN // verify description is valid
+		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN
 		  READ_STRREF "%index%" "description"
-		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~missile~) = 0 BEGIN // more validation
+		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~missile~) = 0 BEGIN
 			INNER_PATCH_SAVE new_desc ~%description%~ BEGIN
 			  REPLACE_TEXTUALLY ~missiles~ ~projectiles~
 			  REPLACE_TEXTUALLY ~missile (piercing)~ ~blunt~
@@ -122,9 +123,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 	    PATCH_IF (gen_name_strref = %light_xbow_strref%) BEGIN
 		  READ_BYTE 0x18 handed
 		  WRITE_BYTE 0x18 (~%handed%~ BAND ~0b11111101~)
-		  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN // loop through descriptions
+		  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN
 		    READ_LONG "%index%" "valid"
-		    PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN // verify description is valid
+		    PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN
 			  READ_STRREF "%index%" "description"
 			  INNER_PATCH_SAVE new_desc ~%description%~ BEGIN
 			    REPLACE_TEXTUALLY EXACT_MATCH ~Type: Two-handed~ ~~
@@ -144,9 +145,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			WRITE_SHORT (abilities_off + 0x38 * ability + 0x1a) new_damage_bonus
 		  END
 		END
-		FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN // loop through descriptions
+		FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN
 		  READ_LONG "%index%" "valid"
-		  PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN // verify description is valid
+		  PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN
 			READ_STRREF "%index%" "description"
 			INNER_PATCH_SAVE new_desc ~%description%~ BEGIN
 			  REPLACE_TEXTUALLY EXACT_MATCH ~Damage: +5~ ~Damage: +6~
@@ -174,11 +175,11 @@ Weight:~
 	END
 	PATCH_IF (~%type%~ = ~5~) BEGIN // arrows
 	  LPF ALTER_ITEM_HEADER INT_VAR header_type=2 dicesize=5 END
-	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN // loop through descriptions
+	  FOR (index = 0x54 ; index >= 0x50 ; index -= 4) BEGIN
 		READ_LONG "%index%" "valid"
-		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN // verify description is valid
+		PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN
 		  READ_STRREF "%index%" "description"
-		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~1d6~) = 0 BEGIN // more validation
+		  PATCH_IF (~%description%~ STRING_CONTAINS_REGEXP ~1d6~) = 0 BEGIN
 			INNER_PATCH_SAVE new_desc ~%description%~ BEGIN
 			  REPLACE_TEXTUALLY ~1d6~ ~1d5~
 			END

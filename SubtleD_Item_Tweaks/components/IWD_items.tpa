@@ -16,9 +16,9 @@ ACTION_IF (GAME_IS ~iwdee~) BEGIN
 END
 ACTION_IF (MOD_IS_INSTALLED ~SETUP-IWD1_EET.TP2~ ~1~) BEGIN
   COPY_EXISTING ~bknight.itm~ ~override~
-    LPF ALTER_ITEM_HEADER INT_VAR drained = 0 flag_recharge = 1 END
+    LPF ALTER_ITEM_HEADER INT_VAR drained = 3 flag_recharge = 1 END
   COPY_EXISTING ~bishop.itm~ ~override~
-    LPF ALTER_ITEM_HEADER INT_VAR drained = 0 flag_recharge = 1 END
+    LPF ALTER_ITEM_HEADER INT_VAR drained = 3 flag_recharge = 1 END
 END
 
 COPY_EXISTING ~quost.itm~ ~override~
