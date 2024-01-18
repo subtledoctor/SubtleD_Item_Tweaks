@@ -454,13 +454,13 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~ring08_.itm~) BEGIN
  ACTION_IF !(MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) BEGIN
   COPY_EXISTING ~ring40.itm~ ~override~
     LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
-//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 177 parameter1 = 19 parameter2 = 5 STR_VAR match_resource = ~d5rng8~ END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
  END
  ACTION_IF (MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) OR (GAME_IS ~bgee~) BEGIN
   COPY_EXISTING ~ring08.itm~ ~override~
     LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
-//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 177 parameter1 = 19 parameter2 = 5 STR_VAR match_resource = ~d5rng8~ END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
  END
 END
@@ -468,14 +468,14 @@ END
 ACTION_IF (FILE_EXISTS_IN_GAME ~bdring08.itm~) BEGIN
   COPY_EXISTING ~bdring08.itm~ ~override~
     LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
-//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 177 parameter1 = 19 parameter2 = 5 STR_VAR match_resource = ~d5rng8~ END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
 END
 
 ACTION_IF (FILE_EXISTS_IN_GAME ~ringkon.itm~) BEGIN
   COPY_EXISTING ~ringkon.itm~ ~override~
     LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
-//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 177 parameter1 = 19 parameter2 = 5 STR_VAR match_resource = ~d5rngk~ END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-2~ END
   ACTION_IF (FILE_EXISTS_IN_GAME ~mh#iwd11.itm~) BEGIN
@@ -486,19 +486,19 @@ END
 ACTION_IF (FILE_EXISTS_IN_GAME ~ringed.itm~) BEGIN
   COPY_EXISTING ~ringed.itm~ ~override~
     LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
-//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 177 parameter1 = 19 parameter2 = 5 STR_VAR match_resource = ~d5rnge~ END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-5~ END
 END
 
 ACTION_IF (FILE_EXISTS_IN_GAME ~mh#iwd11.itm~) BEGIN
-  ACTION_IF !(FILE_EXISTS_IN_GAME ~ringkon.itm~) BEGIN
+//  ACTION_IF !(FILE_EXISTS_IN_GAME ~ringkon.itm~) BEGIN
     COPY_EXISTING ~mh#iwd11.itm~ ~override~
     LPF DELETE_ITEM_HEADER INT_VAR header_type = 3 END
-//    LPF DELETE_EFFECT INT_VAR match_opcode = 177 STR_VAR match_resource = ~d5rng8~ END
+    LPF ALTER_EFFECT INT_VAR match_opcode = 177 parameter1 = 19 parameter2 = 5 STR_VAR match_resource = ~d5rng8~ END
     LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-1~ END
-    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-5~ END   
-  END
+    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 2 STR_VAR resource = ~d5src-2~ END   
+//  END
 END
 
 END	//	end function
