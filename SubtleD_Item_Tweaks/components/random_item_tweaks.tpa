@@ -96,11 +96,15 @@ DEFINE_ACTION_FUNCTION tweak_gloves_missile_snaring BEGIN
 LAF d5_resolve_state STR_VAR new_state_id = ~D5_SNAREARROW~ RET new_state_ind END
 OUTER_SET missile_snaring_state = %new_state_ind%
 OUTER_SET snare_string = RESOLVE_STR_REF (~Deflect~)
+
 ACTION_IF !(FILE_EXISTS_IN_GAME ~7eyes.2da~) BEGIN
   COPY ~%MOD_FOLDER%/data/item_tweaks/7eyes.2da~ ~override~
 END
 
 APPEND ~7eyes.2da~ ~SNARE_ARROW  %missile_snaring_state%      %snare_string%      12*0x800000 *           *           *            *            *          *          *          * ~ UNLESS ~SNARE_ARROW~
+
+COPY_EXISTING ~7eyes.2da~ ~override~
+  LPF 2DA_MISSING_COLS END
 
 COPY_EXISTING ~7eyes.2da~ ~override~
   COUNT_2DA_ROWS 1 rows
