@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/SubtleD_Item_Tweaks~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.3.4~
+VERSION ~v1.4~
 
 ALWAYS
 
@@ -259,11 +259,29 @@ LAF gargoyle_cloak END
 
 //____________________________________________________________________________________
 
+BEGIN @1065
+DESIGNATED 1065
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~ring28.itm~) @1
+INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
+
+LAF ring_of_air END
+
+//____________________________________________________________________________________
+
 BEGIN @1070
 DESIGNATED 1070
 INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
 
 LAF tweak_dwarven_thrower END
+
+//____________________________________________________________________________________
+
+BEGIN @1075
+DESIGNATED 1075
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~staf08.itm~) @1
+INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
+
+LAF martial_staff END
 
 //____________________________________________________________________________________
 

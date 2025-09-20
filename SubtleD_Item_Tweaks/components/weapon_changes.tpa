@@ -210,6 +210,7 @@ Weight:~
 		  PATCH_IF ("%valid%" < 2147483646) AND ("%valid%" >= 0) BEGIN // verify description is valid
 			READ_STRREF "%index%" "description"
 			INNER_PATCH_SAVE new_desc ~%description%~ BEGIN
+			  REPLACE_TEXTUALLY EXACT_MATCH ~Damage: +10~ ~Damage: +6~
 			  REPLACE_TEXTUALLY EXACT_MATCH ~Damage: +5~ ~Damage: +6~
 			  REPLACE_TEXTUALLY EXACT_MATCH ~Damage: +4~ ~Damage: +6~
 			  REPLACE_TEXTUALLY EXACT_MATCH ~Damage: +3~ ~Damage: +5~

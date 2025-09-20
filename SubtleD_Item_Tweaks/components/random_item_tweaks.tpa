@@ -302,6 +302,20 @@ END
 //__________________________________________________________________________________
 
 
+// Ring of Air Control______________________________________________________________
+//
+DEFINE_ACTION_FUNCTION ring_of_air BEGIN
+
+COPY ~%MOD_FOLDER%/data/item_tweaks/ring28.itm~ ~override~
+  SAY IDENTIFIED_DESC @30652
+COPY ~%MOD_FOLDER%/data/item_tweaks/d5rngust.spl~ ~override~
+COPY ~%MOD_FOLDER%/data/item_tweaks/dvsburst.bam~ ~override~
+COPY ~%MOD_FOLDER%/data/item_tweaks/dvsburst.vvc~ ~override~
+
+END
+//__________________________________________________________________________________
+
+
 // Dwarven Thrower__________________________________________________________________
 //
 DEFINE_ACTION_FUNCTION tweak_dwarven_thrower BEGIN
@@ -312,6 +326,17 @@ COPY_EXISTING ~hamm06.itm~ ~override~
 	WRITE_BYTE 0x20 (THIS BAND 0b01111111)
 	WRITE_BYTE 0x21 (THIS BAND 0b01100000)
 IF_EXISTS BUT_ONLY
+
+END
+//__________________________________________________________________________________
+
+
+// Martial Staff____________________________________________________________________
+//
+DEFINE_ACTION_FUNCTION martial_staff BEGIN
+
+COPY ~%MOD_FOLDER%/data/item_tweaks/staf08.itm~ ~override~
+  SAY IDENTIFIED_DESC @30752
 
 END
 //__________________________________________________________________________________

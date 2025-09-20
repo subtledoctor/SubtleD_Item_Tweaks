@@ -32,7 +32,9 @@
 @1052 = ~...Longer Protection~
 @1055 = ~Permanent Fear Protection for the Badge of the Brave~
 @1060 = ~Make the Gargoyle Cloak Apply Stoneskin Instead of an AC Bonus~
+@1065 = ~Let the Ring or Air Control Cast Gust of Wind~
 @1070 = ~Make the Dwarven Thrower Hammer Usable by Non-Dwarves~
+@1075 = ~Make the Martial Staff Grant +APR~
 @1080 = ~Improve Azlaer's Harp and Methild's Harp~
 @1090 = ~Nerf Edwin's Amulet~
 @1091 = ~Only +1 Bonus Slot per Spell Level~
@@ -288,6 +290,36 @@ Charge abilities:
   Duration: 1 turn
 
 Weight: 2
+~
+@30652 = ~Elementals make for powerful foes but with this ring they can become valuable allies. Dark tales tell of groups of Red Wizards all with rings of elemental command descending upon small villages with no warning and destroying every living thing in sight. Although the truth of these rumors is questionable the fact remains that a ring of this power in the wrong hands is dangerous, and that copies of these rings are created by the Red Wizards of Thay indeed and are sold in their enclaves across the realms.
+
+STATISTICS:
+
+Special Abilities:
+ Conjure Lesser Air Elemental (1x per day)
+ Gust of Wind (at will)
+
+Equipped Abilities:
+ Protection from Spells: Stinking Cloud, Cloudkill, Acid Fog, and Incendiary Cloud
+~
+@30752 = ~This humble staff radiates powerful magic, and was likely the weapon of a traveling martial artist. It would certainly prove more than ample for dealing with most threats encountered on the road.
+
+STATISTICS:
+
+Equipped Abilities:
+ Parrying: +2 bonus to AC (none vs. missile)
+
+Combat Abilities:
+ Fluid Strike: +1 attack per 2 rounds
+
+THAC0: +2 bonus
+Damage: 1D6 + 2
+Damage type: crushing
+Weight: 4
+Speed Factor: 4
+Proficiency Type: Quarterstaff
+Type: 2-handed
+Requires: 5 Strength
 ~
 // Azlaer's Harp, replace 30801 with 30802
 @30801 = ~Resist Fear (~
