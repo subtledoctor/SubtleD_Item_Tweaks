@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/SubtleD_Item_Tweaks~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.4~
+VERSION ~v1.4.1~
 
 ALWAYS
 
@@ -262,6 +262,7 @@ LAF gargoyle_cloak END
 BEGIN @1065
 DESIGNATED 1065
 REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~ring28.itm~) @1
+REQUIRE_PREDICATE (MOD_IS_INSTALLED ~item_rev.tp2~ ~0~) @1
 INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
 
 LAF ring_of_air END
