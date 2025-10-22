@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/SubtleD_Item_Tweaks~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.4.1~
+VERSION ~v1.5~
 
 ALWAYS
 
@@ -156,14 +156,12 @@ LAF revise_potion_use END
 BEGIN @170 // armored casting for bards
 DESIGNATED 170
 REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~enginest.2da~) @3
-REQUIRE_PREDICATE !(FILE_EXISTS_IN_GAME ~d5__yaras.d5~) @3
 
 COPY_EXISTING ~sw1h01.itm~ ~override/qdtnb_acbards.qd~ //detection for this component 
 
 INCLUDE ~%MOD_FOLDER%/components/armored_casting_bards.tpa~
 
 LAF armored_bards END
-// ***** need to add code dependent on whether YARAS is already installed
 
 
 //__________________________________________________________________________________
@@ -355,6 +353,7 @@ BEGIN @1109
 DESIGNATED 1109
 //SUBCOMPONENT @1105
 REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~d5zclons.2da~) @1
+INCLUDE ~%MOD_FOLDER%/components/random_item_tweaks.tpa~
 
 LAF tweak_casting_items END
 

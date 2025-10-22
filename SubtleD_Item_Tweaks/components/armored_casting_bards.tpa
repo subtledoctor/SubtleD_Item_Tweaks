@@ -4,6 +4,9 @@
 
 DEFINE_ACTION_FUNCTION armored_bards BEGIN 
 
+ACTION_IF !(FILE_EXISTS_IN_GAME ~d5__yaras.d5~) BEGIN
+ACTION_IF !(FILE_EXISTS_IN_GAME ~d5__semi_armor.d5~) BEGIN
+
 INCLUDE ~%MOD_FOLDER%/lib/d5_armored_casting.tpa~
 LAM D5_ARMORED_CASTING
 
@@ -47,6 +50,54 @@ OUTER_PATCH_SAVE bard ~%bard%~ BEGIN
 	REPLACE_TEXTUALLY ~%old%~ ~%new%~
 END 
 STRING_SET_EVALUATE 9562 ~%bard%~
+
+END	//	end if no semi-casting
+END	//	end if no YARAS
+
+ACTION_IF !(FILE_EXISTS_IN_GAME ~d5zblar.spl~) BEGIN
+  COPY ~%MOD_FOLDER%/lib/d5_base.spl~ ~override/d5zblar.spl~
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~d5__semi_armor.d5~) BEGIN
+  COPY_EXISTING ~d5zblar.spl~ ~override~
+    LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = ~d5zw172l~ END
+    LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = ~d5zarml~ END
+    LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = ~d5zarm1l~ END
+    LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = ~d5zarm2l~ END
+  IF_EXISTS
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~d5__yaras.d5~) BEGIN
+  COPY_EXISTING ~d5zblar.spl~ ~override~
+    PATCH_FOR_EACH val IN ~1~ ~2~ ~3~ BEGIN
+      LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = EVAL ~d5_cstp%val%~ END
+    END
+    PATCH_FOR_EACH val IN ~1~ ~2~ BEGIN
+      LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = EVAL ~d5_cstm%val%~ END
+      LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = EVAL ~d5_cstl%val%~ END
+      LPF ADD_SPELL_EFFECT INT_VAR opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = EVAL ~d5_cstd%val%~ END
+    END
+  IF_EXISTS
+END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~d5__semi_armor.d5~) OR (FILE_EXISTS_IN_GAME ~d5__yaras.d5~) BEGIN
+ APPEND ~clabba01.2da~ ~BARD_CAST   AP_D5ZBLAR  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        **** ~ UNLESS ~AP_D5ZBLAR~
+ COPY_EXISTING ~kitlist.2da~ ~override~
+  COUNT_2DA_COLS cols
+  READ_2DA_ENTRIES_NOW ~r2en_kitlist~ 10
+  FOR (row = 2; row < r2en_kitlist; row += 1) BEGIN
+    READ_2DA_ENTRY_FORMER ~r2en_kitlist~ row 5 kit_table
+    READ_2DA_ENTRY_FORMER ~r2en_kitlist~ row 8 class_num
+    PATCH_IF (class_num = 5) BEGIN
+      INNER_ACTION BEGIN
+        ACTION_IF (FILE_EXISTS_IN_GAME ~%kit_table%.2da~) BEGIN
+          APPEND ~%kit_table%.2da~ ~BARD_CAST   AP_D5ZBLAR  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        **** ~ UNLESS ~AP_D5ZBLAR~
+        END
+      END
+    END
+  END
+ BUT_ONLY
+END
 
 END 	//	end define function
 //____________________________________________________________________________________

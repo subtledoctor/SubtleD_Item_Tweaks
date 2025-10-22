@@ -9,7 +9,7 @@
 <body>
 <h1>SubtleMods: SubtleD's Item Tweaks</h1>
 <div class="section">
-  <p><strong> Version 1.4 </strong><br />
+  <p><strong> Version 1.5 </strong><br />
   <strong> Languages:</strong> English</p>
   <p><strong>Author: <a href="http://forums.gibberlings3.net/index.php?showuser=6306">The Subtle Doctor</a></strong></p>
   <p><strong><a href="https://github.com/subtledoctor/SubtleD_Item_Tweaks/releases">Home page</a></strong></p>
@@ -26,16 +26,16 @@
   <h4 class="subheader">Component 100: </h4>
   <div class="section">
     <p><strong><em>YARAS - Yet Another Revised Armor System</em></strong></p>
-    <p>This component changes armor to give the wearer a mix of Armor Class and Damage Resistance bonuses. The values are listed below:</p>
+    <p>This component changes armor to give the wearer a mix of Armor Class and Damage Resistance bonuses. The <b>default</b> values are listed below:</p>
       <pre>
  Armor:
-    leather:	  AC 8 	-1 Dex 	8% DR 	+2 casting time  +0 weapon speed  0% miscast chance  0 movement penalty
-    studded:	  AC 7 	-2 Dex 	12% DR 	+2 casting time  +0 weapon speed  0% miscast chance  0 movement penalty
-    hide armor:   AC 6 	-3 Dex 	24% DR	+3 casting time  +0 weapon speed  0% miscast chance  0 movement penalty
-    chain mail:   AC 5 	-3 Dex 	24% DR	+3 casting time  +1 weapon speed  0% miscast chance  0 movement penalty
-    splint mail:  AC 5 	-4 Dex 	30% DR	+4 casting time  +2 weapon speed  0% miscast chance  0 movement penalty
-    plate mail:   AC 4 	-5 Dex 	36% DR	+5 casting time  +2 weapon speed  0% miscast chance  0 movement penalty
-    full plate:   AC 3 	-4 Dex	42% DR	+5 casting time  +2 weapon speed  0% miscast chance  0 movement penalty<br />
+    leather:	  AC 8 	-1 Dex 	8% DR 	+2 cast time  -2 cast level  0% miscast  +0 weapon speed  0 movement penalty
+    studded:	  AC 7 	-2 Dex 	12% DR 	+2 cast time  -3 cast level  0% miscast  +0 weapon speed  0 movement penalty
+    hide armor:   AC 6 	-3 Dex 	24% DR	+3 cast time  -3 cast level  0% miscast  +0 weapon speed  0 movement penalty
+    chain mail:   AC 5 	-3 Dex 	24% DR	+3 cast time  -5 cast level  0% miscast  +1 weapon speed  0 movement penalty
+    splint mail:  AC 5 	-4 Dex 	30% DR	+3 cast time  -6 cast level  0% miscast  +2 weapon speed  0 movement penalty
+    plate mail:   AC 4 	-5 Dex 	36% DR	+4 cast time  -8 cast level  0% miscast  +2 weapon speed  0 movement penalty
+    full plate:   AC 3 	-5 Dex	42% DR	+4 cast time  -9 cast level  0% miscast  +2 weapon speed  0 movement penalty<br />
  Enchantment:
     +1:	 	-1 AC	+1 Dex	+1% DR
     +2: 	-2 AC 	   " 	+2% DR
@@ -50,7 +50,7 @@
     <p>This component allows casting arcane spells in armor, but with steep casting time penalties. (As of now, these penalties do not affect divine casters.) It also makes changes to Dexterity bonuses: bonuses to AC and thieving skills are increased so that the penalty for wearing armor is more meaningful without being crippling, and the option to go without armor is a bit more reasonable.</p>
     <p>This also makes changes to Dexterity bonuses: bonuses to AC and thieving skills are increased so that the penalty for wearing armor is more meaningful without being crippling, and the option to go without armor is a bit more reasonable.</p>
     <p>Finally, this alters the Armor of Faith spell to only give a flat 10% DR bonus, at all levels; and reduces the DR bonus from Hardiness and Defensive Stance form 40% to 20%; and reduces the price of the Defender of Easthaven while reducing its DR bonus from 20% to 5%.</p>
-    <p><b>NOTE:</b> you can change these values by editing them in /Scales_of_Balance/ini/YARAS_default.ini. There is another version of these settings, which only applies thief skill penalties a chance of miscast magic... this is meant to mimic the "Allow Thieving in Heavy Armor" and "Allow Spellcasting in Armor" components of Tweaks Anthology, but is compatible with mods like Might & Guile and the 5E spellcasting conversion. To use those settings or your own personal preferences, copy /Scales_of_Balance/ini/YARAS_CD.ini or your modified version of /Scales_of_Balance/ini/YARAS_default.ini into your override folder and rename it to "d5_yaras.ini." If that file is in your override folder at the time of installation, the mod will use those settings instead of the default settings. If you like, you can keep a copy of "d5_yaras.ini" with your own preferred settings and simply drop it into your override folder before each time you install mods.</p>
+    <p><b>NOTE:</b> you can change these values by editing SubtleD_Item_Tweaks/ini/YARAS_default.ini before installing the mod. There is another version of these settings, which only applies thief skill penalties a chance of miscast magic... this is meant to mimic the "Allow Thieving in Heavy Armor" and "Allow Spellcasting in Armor" components of Tweaks Anthology, but is compatible with mods like Might & Guile and the 5E spellcasting conversion. To use those settings or your own personal preferences, copy /Scales_of_Balance/ini/YARAS_CD.ini or your modified version of /Scales_of_Balance/ini/YARAS_default.ini into your override folder and rename it to "d5_yaras.ini." If that file is in your override folder at the time of installation, the mod will use those settings instead of the default settings. If you like, you can keep a copy of "d5_yaras.ini" with your own preferred settings and simply drop it into your override folder before each time you install mods.</p>
     <p><b>Compatibility:</b> this component covers the same ground as the IR component "Revised Armors" as well as the "Spellcasting in Armor" component.  Ditto for the Full Plate and Packing Steel mod, and some armor/casting-related components of Tweaks Anthology and Klatu Tweaks. Don't install these things together; choose one armor system mod and stick with it.</p>
   </div>
   <h4 class="subheader">Component 110: </h4>

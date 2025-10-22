@@ -57,6 +57,7 @@
 @10006  = ~Weapon Attack Speed Penalty: +~
 @10007  = ~Movement Speed Penalty: -~
 @10008  = ~Arcane Spell Failure Chance: ~
+@10009  = ~Arcane Caster Level Penalty: -~
 @10011  = ~dragon~
 @10012  = ~elven~
 @10013  = ~elvish~

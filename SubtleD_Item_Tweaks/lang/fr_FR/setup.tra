@@ -59,6 +59,7 @@
 @10006  = ~Pénalité au facteur de vitesse d'arme : +~
 @10007  = ~Pénalité à la vitesse de déplacement : -~
 @10008  = ~Risque d'échec des sorts profanes : ~
+@10009  = ~Arcane Caster Level Penalty: ~
 // used to detect dragon scale armor?
 @10011  = ~[Dd]ragon~
 @10012  = ~elfe\|elfique\|[Ee]lven~

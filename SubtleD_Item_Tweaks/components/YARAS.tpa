@@ -24,7 +24,7 @@ LAM special_armor_lists
 //__________________________________________________________________________________
 
 
-//__________________________________________________________________________________
+//CASTING SPEED EFFs________________________________________________________________
 //
 COPY ~%MOD_FOLDER%/data/YARAS/d5_cstp1.eff~ ~override~
 COPY ~%MOD_FOLDER%/data/YARAS/d5_cstp2.eff~ ~override~
@@ -83,7 +83,86 @@ COPY ~%MOD_FOLDER%/data/YARAS/d5_cstm1.eff~ ~override/d5_cstm9.eff~
   LPM armor_characteristics
   WRITE_LONG 0x1c %elven_miscast%
   WRITE_ASCII 0x94 ~D5_CSTM9~ #8
+//__________________________________________________________________________________
 
+
+//MAKE CASTER LEVEL EFFs____________________________________________________________
+//
+OUTER_SET enchantment = 0 	//	just need to do this in order to read the .ini file
+
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstl1.eff~ ~override~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c (0 - %leather_depower%)
+  WRITE_ASCII 0x94 ~D5_CSTL1~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstl1.eff~ ~override/d5_cstl2.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c (0 - %studded_depower%)
+  WRITE_ASCII 0x94 ~D5_CSTL2~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstl1.eff~ ~override/d5_cstl3.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c (0 - %hide_depower%)
+  WRITE_ASCII 0x94 ~D5_CSTL3~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstl1.eff~ ~override/d5_cstl4.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c (0 - %scale_depower%)
+  WRITE_ASCII 0x94 ~D5_CSTL4~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstl1.eff~ ~override/d5_cstl5.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c (0 - %chain_depower%)
+  WRITE_ASCII 0x94 ~D5_CSTL5~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstl1.eff~ ~override/d5_cstl6.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c (0 - %splint_depower%)
+  WRITE_ASCII 0x94 ~D5_CSTL6~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstl1.eff~ ~override/d5_cstl7.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c (0 - %plate_depower%)
+  WRITE_ASCII 0x94 ~D5_CSTL7~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstl1.eff~ ~override/d5_cstl8.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c (0 - %fullplate_depower%)
+  WRITE_ASCII 0x94 ~D5_CSTL8~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstl1.eff~ ~override/d5_cstl9.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c (0 - %elven_depower%)
+  WRITE_ASCII 0x94 ~D5_CSTL9~ #8
+
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstd1.eff~ ~override~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c %leather_duration%
+  WRITE_ASCII 0x94 ~D5_CSTD1~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstd1.eff~ ~override/d5_cstd2.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c %studded_duration%
+  WRITE_ASCII 0x94 ~D5_CSTD2~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstd1.eff~ ~override/d5_cstd3.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c %hide_duration%
+  WRITE_ASCII 0x94 ~D5_CSTD3~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstd1.eff~ ~override/d5_cstd4.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c %scale_duration%
+  WRITE_ASCII 0x94 ~D5_CSTD4~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstd1.eff~ ~override/d5_cstd5.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c %chain_duration%
+  WRITE_ASCII 0x94 ~D5_CSTD5~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstd1.eff~ ~override/d5_cstd6.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c %splint_duration%
+  WRITE_ASCII 0x94 ~D5_CSTD6~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstd1.eff~ ~override/d5_cstd7.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c %plate_duration%
+  WRITE_ASCII 0x94 ~D5_CSTD7~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstd1.eff~ ~override/d5_cstd8.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c %fullplate_duration%
+  WRITE_ASCII 0x94 ~D5_CSTD8~ #8
+COPY ~%MOD_FOLDER%/data/YARAS/d5_cstd1.eff~ ~override/d5_cstd9.eff~
+  LPM armor_characteristics
+  WRITE_LONG 0x1c %elven_duration%
+  WRITE_ASCII 0x94 ~D5_CSTD9~ #8
 //__________________________________________________________________________________
 
 
@@ -164,6 +243,7 @@ END
 	OUTER_SPRINT new_weap @10006
 	OUTER_SPRINT new_move @10007
 	OUTER_SPRINT new_miscast @10008
+	OUTER_SPRINT new_depower @10009
 
 	OUTER_SPRINT elvish_tra @10013
 	OUTER_SPRINT sylvan_tra @10014
@@ -456,6 +536,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			PATCH_IF (no_cast = 0) BEGIN
 			  SET leather_speed = 0
 			  SET leather_miscast = 0
+			  SET leather_depower = 0
+			  SET elven_speed = 0
+			  SET elven_depower = 0
+			  SET elven_miscast = 0
 			END
 			LPF DELETE_EFFECT INT_VAR match_opcode = 0 END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = %leather_ac% parameter2 = 16 timing = 2 END
@@ -468,6 +552,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_dr%%leather_dr%%%WNL%~
 			END
 			PATCH_IF (elven = 1) BEGIN 
+			  SET elven_speed = 0
+			  SET elven_depower = 0
+			  SET elven_miscast = 0
 				PATCH_PRINT ~%SOURCE_RES% = casting leather +%enchantment%~
 				WRITE_BYTE 0x2d ("0x00") //blocked: none
 				PATCH_IF (elven_dex > 0) BEGIN
@@ -482,6 +569,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 				  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %elven_weap%) parameter2 = 0 timing = 2 END
 				  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%elven_weap%%WNL%~
 				END
+			    PATCH_IF (elven_depower > 0) BEGIN
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %elven_depower%) parameter2 = 0 timing = 2 END
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %elven_duration%) parameter2 = 0 timing = 2 END
+			      SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%elven_depower%%WNL%~
+			    END
 			    PATCH_IF (elven_miscast > 0) BEGIN
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM9~ END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%elven_miscast%%%WNL%~
@@ -491,10 +583,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%elven_speed%~ END
 			      END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%elven_speed%%WNL%~
+/*
 			      PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			        LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%elven_speed%~ resource = EVAL ~d5_cstb%elven_speed%~ END
 			      END
-/*
 				  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 				    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%elven_speed%~ resource = EVAL ~d5_cstb%elven_speed%~ END
 				  END
@@ -541,6 +633,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %leather_weap%) parameter2 = 0 timing = 2 END
 			    SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%leather_weap%%WNL%~
 			  END
+			  PATCH_IF (leather_depower > 0) BEGIN
+			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %leather_depower%) parameter2 = 0 timing = 2 END
+			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %leather_duration%) parameter2 = 0 timing = 2 END
+			    SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%leather_depower%%WNL%~
+			  END
 			  PATCH_IF (leather_miscast > 0) BEGIN
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM1~ END
 			    SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%leather_miscast%%%WNL%~
@@ -550,10 +647,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%leather_speed%~ END
 			    END
 			    SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%leather_speed%%WNL%~
+/*
 			    PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			      LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%leather_speed%~ resource = EVAL ~d5_cstb%leather_speed%~ END
 			    END
-/*
 			    PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 			      LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%leather_speed%~ resource = EVAL ~d5_cstb%leather_speed%~ END
 			    END
@@ -597,6 +694,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			PATCH_IF (no_cast = 0) BEGIN
 			  SET hide_speed = 0
 			  SET hide_miscast = 0
+			  SET hide_depower = 0
 			END
 			LPF DELETE_EFFECT INT_VAR match_opcode = 0 END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = %hide_ac% parameter2 = 16 timing = 2 END
@@ -620,6 +718,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %hide_weap%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%hide_weap%%WNL%~
 			END
+			PATCH_IF (hide_depower > 0) BEGIN
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %hide_depower%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %hide_duration%) parameter2 = 0 timing = 2 END
+			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%hide_depower%%WNL%~
+			END
 			PATCH_IF (hide_miscast > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM3~ END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%hide_miscast%%%WNL%~
@@ -629,10 +732,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%hide_speed%~ END
 			  END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%hide_speed%%WNL%~
+/*
 			  PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%hide_speed%~ resource = EVAL ~d5_cstb%hide_speed%~ END
 			  END
-/*
 			  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%hide_speed%~ resource = EVAL ~d5_cstb%hide_speed%~ END
 			  END
@@ -674,6 +777,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			PATCH_IF (no_cast = 0) BEGIN
 			  SET studded_speed = 0
 			  SET studded_miscast = 0
+			  SET studded_depower = 0
+			  SET elven_speed = 0
+			  SET elven_depower = 0
+			  SET elven_miscast = 0
 			END
 			LPF DELETE_EFFECT INT_VAR match_opcode = 0 END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = %studded_ac% parameter2 = 16 timing = 2 END
@@ -686,6 +793,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_dr%%studded_dr%%%WNL%~
 			END
 			PATCH_IF (elven = 1) BEGIN 
+			  SET elven_speed = 0
+			  SET elven_depower = 0
+			  SET elven_miscast = 0
 				PATCH_PRINT ~%SOURCE_RES% = casting leather +%enchantment%~
 				WRITE_BYTE 0x2d ("0x00") //blocked: none
 				PATCH_IF (elven_dex > 0) BEGIN
@@ -700,6 +810,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 				  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %elven_weap%) parameter2 = 0 timing = 2 END
 				  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%elven_weap%%WNL%~
 				END
+			    PATCH_IF (elven_depower > 0) BEGIN
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %elven_depower%) parameter2 = 0 timing = 2 END
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %elven_duration%) parameter2 = 0 timing = 2 END
+			      SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%elven_depower%%WNL%~
+			    END
 			    PATCH_IF (elven_miscast > 0) BEGIN
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM9~ END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%elven_miscast%%%WNL%~
@@ -709,10 +824,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%elven_speed%~ END
 			      END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%elven_speed%%WNL%~
+/*
 			      PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			        LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%elven_speed%~ resource = EVAL ~d5_cstb%elven_speed%~ END
 			      END
-/*
 				  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 				    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%elven_speed%~ resource = EVAL ~d5_cstb%elven_speed%~ END
 				  END
@@ -759,6 +874,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %studded_weap%) parameter2 = 0 timing = 2 END
 			    SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%studded_weap%%WNL%~
 			  END
+			  PATCH_IF (studded_depower > 0) BEGIN
+			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %studded_depower%) parameter2 = 0 timing = 2 END
+			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %studded_duration%) parameter2 = 0 timing = 2 END
+			    SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%studded_depower%%WNL%~
+			  END
 			  PATCH_IF (studded_miscast > 0) BEGIN
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM2~ END
 			    SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%studded_miscast%%%WNL%~
@@ -768,10 +888,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%studded_speed%~ END
 			    END
 			    SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%studded_speed%%WNL%~
+/*
 			    PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			      LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%studded_speed%~ resource = EVAL ~d5_cstb%studded_speed%~ END
 			    END
-/*
 			    PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 			      LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%studded_speed%~ resource = EVAL ~d5_cstb%studded_speed%~ END
 			    END
@@ -818,6 +938,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			PATCH_IF (no_cast = 0) BEGIN
 			  SET splint_speed = 0
 			  SET splint_miscast = 0
+			  SET splint_depower = 0
 			END
 			LPF DELETE_EFFECT INT_VAR match_opcode = 0 END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = %splint_ac% parameter2 = 16 timing = 2 END
@@ -842,6 +963,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %splint_weap%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%splint_weap%%WNL%~
 			END
+			PATCH_IF (splint_depower > 0) BEGIN
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %splint_depower%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %splint_duration%) parameter2 = 0 timing = 2 END
+			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%splint_depower%%WNL%~
+			END
 			PATCH_IF (splint_miscast > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM6~ END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%splint_miscast%%%WNL%~
@@ -851,10 +977,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%splint_speed%~ END
 			  END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%splint_speed%%WNL%~
+/*
 			  PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%splint_speed%~ resource = EVAL ~d5_cstb%splint_speed%~ END
 			  END
-/*
 			  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%splint_speed%~ resource = EVAL ~d5_cstb%splint_speed%~ END
 			  END
@@ -913,6 +1039,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			PATCH_IF (no_cast = 0) BEGIN
 			  SET scale_speed = 0
 			  SET scale_miscast = 0
+			  SET scale_depower = 0
 			END
 			LPF DELETE_EFFECT INT_VAR match_opcode = 0 END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = %scale_ac% parameter2 = 16 timing = 2 END
@@ -937,6 +1064,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %scale_weap%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%scale_weap%%WNL%~
 			END
+			PATCH_IF (scale_depower > 0) BEGIN
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %scale_depower%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %scale_duration%) parameter2 = 0 timing = 2 END
+			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%scale_depower%%WNL%~
+			END
 			PATCH_IF (scale_miscast > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM4~ END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%scale_miscast%%%WNL%~
@@ -946,10 +1078,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%scale_speed%~ END
 			  END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%scale_speed%%WNL%~
+/*
 			  PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%scale_speed%~ resource = EVAL ~d5_cstb%scale_speed%~ END
 			  END
-/*
 			  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%scale_speed%~ resource = EVAL ~d5_cstb%scale_speed%~ END
 			  END
@@ -1009,6 +1141,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  SET chain_speed = 0
 			  SET leather_miscast = 0
 			  SET chain_miscast = 0
+			  SET chain_depower = 0
+			  SET elven_speed = 0
+			  SET elven_depower = 0
+			  SET elven_miscast = 0
 			END
 			LPF DELETE_EFFECT INT_VAR match_opcode = 0 END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = %chain_ac% parameter2 = 16 timing = 2 END
@@ -1029,6 +1165,9 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_dr%%chain_dr%%%WNL%~
 			END
 			PATCH_IF (elven = 1) BEGIN 
+			  SET elven_speed = 0
+			  SET elven_depower = 0
+			  SET elven_miscast = 0
 				PATCH_PRINT ~%SOURCE_RES% = elven chain +%enchantment%~
 				WRITE_BYTE 0x2d ("0x00") //blocked: none
 				PATCH_IF (elven_dex > 0) BEGIN
@@ -1043,6 +1182,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 				  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %elven_weap%) parameter2 = 0 timing = 2 END
 				  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%elven_weap%%WNL%~
 				END
+			    PATCH_IF (elven_depower > 0) BEGIN
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %elven_depower%) parameter2 = 0 timing = 2 END
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %elven_duration%) parameter2 = 0 timing = 2 END
+			      SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%elven_depower%%WNL%~
+			    END
 			    PATCH_IF (elven_miscast > 0) BEGIN
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM9~ END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%elven_miscast%%%WNL%~
@@ -1052,10 +1196,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%elven_speed%~ END
 			      END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%elven_speed%%WNL%~
+/*
 			      PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			        LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%elven_speed%~ resource = EVAL ~d5_cstb%elven_speed%~ END
 			      END
-/*
 				  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 				    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%elven_speed%~ resource = EVAL ~d5_cstb%elven_speed%~ END
 				  END
@@ -1103,6 +1247,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 				  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %chain_weap%) parameter2 = 0 timing = 2 END
 				  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%chain_weap%%WNL%~
 				END
+			    PATCH_IF (chain_depower > 0) BEGIN
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %chain_depower%) parameter2 = 0 timing = 2 END
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %chain_duration%) parameter2 = 0 timing = 2 END
+			      SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%chain_depower%%WNL%~
+			    END
 			    PATCH_IF (chain_miscast > 0) BEGIN
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM5~ END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%chain_miscast%%%WNL%~
@@ -1112,10 +1261,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			        LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%chain_speed%~ END
 			      END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%chain_speed%%WNL%~
+/*
 			      PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			        LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%chain_speed%~ resource = EVAL ~d5_cstb%chain_speed%~ END
 			      END
-/*
 				  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 				    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%chain_speed%~ resource = EVAL ~d5_cstb%chain_speed%~ END
 				  END
@@ -1171,6 +1320,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			PATCH_IF (no_cast = 0) BEGIN
 			  SET fullplate_speed = 0
 			  SET fullplate_miscast = 0
+			  SET fullplate_depower = 0
 			END
 			LPF DELETE_EFFECT INT_VAR match_opcode = 0 END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = %fullplate_ac% parameter2 = 16 timing = 2 END
@@ -1195,6 +1345,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %fullplate_weap%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%fullplate_weap%%WNL%~
 			END
+			PATCH_IF (fullplate_depower > 0) BEGIN
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %fullplate_depower%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %fullplate_duration%) parameter2 = 0 timing = 2 END
+			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%fullplate_depower%%WNL%~
+			END
 			PATCH_IF (fullplate_miscast > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM8~ END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%fullplate_miscast%%%WNL%~
@@ -1204,10 +1359,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%fullplate_speed%~ END
 			  END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%fullplate_speed%%WNL%~
+/*
 			  PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%fullplate_speed%~ resource = EVAL ~d5_cstb%fullplate_speed%~ END
 			  END
-/*
 			  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%fullplate_speed%~ resource = EVAL ~d5_cstb%fullplate_speed%~ END
 			  END
@@ -1266,6 +1421,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			PATCH_IF (no_cast = 0) BEGIN
 			  SET scale_speed = 0
 			  SET scale_miscast = 0
+			  SET scale_depower = 0
 			END
 			LPF DELETE_EFFECT INT_VAR match_opcode = 0 END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = %scale_ac% parameter2 = 16 timing = 2 END
@@ -1290,6 +1446,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %scale_weap%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%scale_weap%%WNL%~
 			END
+			PATCH_IF (scale_depower > 0) BEGIN
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %scale_depower%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %scale_duration%) parameter2 = 0 timing = 2 END
+			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%scale_depower%%WNL%~
+			END
 			PATCH_IF (scale_miscast > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM4~ END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%scale_miscast%%%WNL%~
@@ -1299,10 +1460,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%scale_speed%~ END
 			  END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%scale_speed%%WNL%~
+/*
 			  PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%scale_speed%~ resource = EVAL ~d5_cstb%scale_speed%~ END
 			  END
-/*
 			  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%scale_speed%~ resource = EVAL ~d5_cstb%scale_speed%~ END
 			  END
@@ -1361,6 +1522,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			PATCH_IF (no_cast = 0) BEGIN
 			  SET plate_speed = 0
 			  SET plate_miscast = 0
+			  SET plate_depower = 0
 			END
 			LPF DELETE_EFFECT INT_VAR match_opcode = 0 END
 			LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 0 target = 1 parameter1 = %plate_ac% parameter2 = 16 timing = 2 END
@@ -1385,6 +1547,11 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 190 target = 1 parameter1 = (0 - %plate_weap%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_weap%%plate_weap%%WNL%~
 			END
+			PATCH_IF (plate_depower > 0) BEGIN
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %plate_depower%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %plate_duration%) parameter2 = 0 timing = 2 END
+			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%plate_depower%%WNL%~
+			END
 			PATCH_IF (plate_miscast > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 2 STR_VAR resource = ~D5_CSTM7~ END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_miscast%%plate_miscast%%%WNL%~
@@ -1394,10 +1561,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 1 parameter1 = %class% parameter2 = 5 timing = 2 STR_VAR resource = EVAL ~d5_cstp%plate_speed%~ END
 			  END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_speed%%plate_speed%%WNL%~
+/*
 			  PATCH_IF (FILE_EXISTS_IN_GAME ~d5__bards.d5~) OR (FILE_EXISTS_IN_GAME ~qdtnb_acbards.qd~) BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = 5 parameter2 = 5 STR_VAR match_resource = EVAL ~d5_cstp%plate_speed%~ resource = EVAL ~d5_cstb%plate_speed%~ END
 			  END
-/*
 			  PATCH_IF FILE_EXISTS_IN_GAME ~qdmagus.2da~ BEGIN
 			    LPF CLONE_EFFECT INT_VAR silent = 1 match_opcode = 177 multi_match = 1 parameter1 = %magus_code% parameter2 = 9 STR_VAR match_resource = EVAL ~d5_cstp%plate_speed%~ resource = EVAL ~d5_cstb%plate_speed%~ END
 			  END
