@@ -336,6 +336,7 @@ END
 DEFINE_ACTION_FUNCTION martial_staff BEGIN
 
 COPY ~%MOD_FOLDER%/data/item_tweaks/staf08.itm~ ~override~
+  SAY NAME2 @30751
   SAY IDENTIFIED_DESC @30752
 
 END

@@ -295,6 +295,26 @@ Capacités de charge :
 
 Poids : 2
 ~
+@30751 = ~Martial Staff~
+@30752 = ~This humble staff radiates powerful magic, and was likely the weapon of a traveling martial artist. It would certainly prove more than ample for dealing with most threats encountered on the road.
+
+STATISTICS:
+
+Equipped Abilities:
+ Parrying: +2 bonus to AC (none vs. missile)
+
+Combat Abilities:
+ Fluid Strike: +1 attack per 2 rounds
+
+THAC0: +2 bonus
+Damage: 1D6 + 2
+Damage type: crushing
+Weight: 4
+Speed Factor: 4
+Proficiency Type: Quarterstaff
+Type: 2-handed
+Requires: 5 Strength
+~
 // Azlaer's Harp, replace 30801 with 30802
 @30801 = ~Dissipation de la terreur~
 @30802 = ~Dissipation de la terreur et Aide~
