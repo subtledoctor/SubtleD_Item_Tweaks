@@ -571,7 +571,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 				END
 			    PATCH_IF (elven_depower > 0) BEGIN
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %elven_depower%) parameter2 = 0 timing = 2 END
-			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %elven_duration%) parameter2 = 0 timing = 2 END
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%elven_duration%) parameter2 = 0 timing = 2 END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%elven_depower%%WNL%~
 			    END
 			    PATCH_IF (elven_miscast > 0) BEGIN
@@ -635,7 +635,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  END
 			  PATCH_IF (leather_depower > 0) BEGIN
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %leather_depower%) parameter2 = 0 timing = 2 END
-			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %leather_duration%) parameter2 = 0 timing = 2 END
+			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%leather_duration%) parameter2 = 0 timing = 2 END
 			    SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%leather_depower%%WNL%~
 			  END
 			  PATCH_IF (leather_miscast > 0) BEGIN
@@ -720,7 +720,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			END
 			PATCH_IF (hide_depower > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %hide_depower%) parameter2 = 0 timing = 2 END
-			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %hide_duration%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%hide_duration%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%hide_depower%%WNL%~
 			END
 			PATCH_IF (hide_miscast > 0) BEGIN
@@ -812,7 +812,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 				END
 			    PATCH_IF (elven_depower > 0) BEGIN
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %elven_depower%) parameter2 = 0 timing = 2 END
-			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %elven_duration%) parameter2 = 0 timing = 2 END
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%elven_duration%) parameter2 = 0 timing = 2 END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%elven_depower%%WNL%~
 			    END
 			    PATCH_IF (elven_miscast > 0) BEGIN
@@ -876,7 +876,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			  END
 			  PATCH_IF (studded_depower > 0) BEGIN
 			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %studded_depower%) parameter2 = 0 timing = 2 END
-			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %studded_duration%) parameter2 = 0 timing = 2 END
+			    LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%studded_duration%) parameter2 = 0 timing = 2 END
 			    SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%studded_depower%%WNL%~
 			  END
 			  PATCH_IF (studded_miscast > 0) BEGIN
@@ -965,7 +965,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			END
 			PATCH_IF (splint_depower > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %splint_depower%) parameter2 = 0 timing = 2 END
-			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %splint_duration%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%splint_duration%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%splint_depower%%WNL%~
 			END
 			PATCH_IF (splint_miscast > 0) BEGIN
@@ -1066,7 +1066,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			END
 			PATCH_IF (scale_depower > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %scale_depower%) parameter2 = 0 timing = 2 END
-			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %scale_duration%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%scale_duration%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%scale_depower%%WNL%~
 			END
 			PATCH_IF (scale_miscast > 0) BEGIN
@@ -1184,7 +1184,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 				END
 			    PATCH_IF (elven_depower > 0) BEGIN
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %elven_depower%) parameter2 = 0 timing = 2 END
-			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %elven_duration%) parameter2 = 0 timing = 2 END
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%elven_duration%) parameter2 = 0 timing = 2 END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%elven_depower%%WNL%~
 			    END
 			    PATCH_IF (elven_miscast > 0) BEGIN
@@ -1249,7 +1249,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 				END
 			    PATCH_IF (chain_depower > 0) BEGIN
 			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %chain_depower%) parameter2 = 0 timing = 2 END
-			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %chain_duration%) parameter2 = 0 timing = 2 END
+			      LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%chain_duration%) parameter2 = 0 timing = 2 END
 			      SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%chain_depower%%WNL%~
 			    END
 			    PATCH_IF (chain_miscast > 0) BEGIN
@@ -1347,7 +1347,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			END
 			PATCH_IF (fullplate_depower > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %fullplate_depower%) parameter2 = 0 timing = 2 END
-			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %fullplate_duration%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%fullplate_duration%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%fullplate_depower%%WNL%~
 			END
 			PATCH_IF (fullplate_miscast > 0) BEGIN
@@ -1448,7 +1448,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			END
 			PATCH_IF (scale_depower > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %scale_depower%) parameter2 = 0 timing = 2 END
-			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %scale_duration%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%scale_duration%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%scale_depower%%WNL%~
 			END
 			PATCH_IF (scale_miscast > 0) BEGIN
@@ -1549,7 +1549,7 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
 			END
 			PATCH_IF (plate_depower > 0) BEGIN
 			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 191 target = 1 parameter1 = (0 - %plate_depower%) parameter2 = 0 timing = 2 END
-			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (0 - %plate_duration%) parameter2 = 0 timing = 2 END
+			  LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 99 target = 1 parameter1 = (%plate_duration%) parameter2 = 0 timing = 2 END
 			  SPRINT new_desc_lines ~%new_desc_lines%%new_depower%%plate_depower%%WNL%~
 			END
 			PATCH_IF (plate_miscast > 0) BEGIN
